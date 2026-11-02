@@ -23,131 +23,169 @@
 </header>
 <main id="conteudo">
 <section class="abertura">
-  <div class="miolo abertura-grade">
-    <div class="abertura-texto">
-      <h1>Conversas protegidas atrás de uma calculadora.</h1>
-      <p>O Contatinho abre numa calculadora que funciona de verdade. A conta que você escolheu leva às suas conversas, cifradas de ponta a ponta.</p>
-    </div>
-    <div>
-      <div class="calc" data-calc role="group" aria-label="Calculadora de demonstração">
-        <div class="calc-visor">
-          <span class="calc-conta" aria-hidden="true"></span>
-          <output aria-live="polite">0</output>
-        </div>
-        <div class="calc-teclas">
-          <button class="tecla tecla--op" type="button" data-k="c" aria-label="Limpar">C</button>
-          <button class="tecla tecla--op" type="button" data-k="apagar" aria-label="Apagar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" d="M9 5h11a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H9l-6-7zM12 9.500l5 5M17 9.500l-5 5"/></svg></button>
-          <button class="tecla tecla--op" type="button" data-k="/" aria-label="Dividir">÷</button>
-          <button class="tecla tecla--op" type="button" data-k="*" aria-label="Multiplicar">×</button>
-          <button class="tecla" type="button" data-k="7">7</button>
-          <button class="tecla" type="button" data-k="8">8</button>
-          <button class="tecla" type="button" data-k="9">9</button>
-          <button class="tecla tecla--op" type="button" data-k="-" aria-label="Menos">−</button>
-          <button class="tecla" type="button" data-k="4">4</button>
-          <button class="tecla" type="button" data-k="5">5</button>
-          <button class="tecla" type="button" data-k="6">6</button>
-          <button class="tecla tecla--op" type="button" data-k="+" aria-label="Mais">+</button>
-          <button class="tecla" type="button" data-k="1">1</button>
-          <button class="tecla" type="button" data-k="2">2</button>
-          <button class="tecla" type="button" data-k="3">3</button>
-          <button class="tecla tecla--igual" type="button" data-k="=" aria-label="Igual"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path fill="currentColor" d="M27 26h46a9 9 0 0 1 0 18H27a9 9 0 0 1 0-18Zm0 23h46a9 9 0 0 1 0 18H42.5L31 77c-1.900 1.700-3.500.800-3.500-1.500V67H27a9 9 0 0 1 0-18Z"/></svg></button>
-          <button class="tecla tecla--zero" type="button" data-k="0">0</button>
-          <button class="tecla" type="button" data-k="." aria-label="Vírgula">,</button>
-        </div>
-        <div class="calc-aberta" hidden>
-          <h2>Abriu.</h2>
-          <p class="balao">A conta certa leva às conversas.</p>
-          <p class="balao balao--cauda">No app, quem escolhe a conta é você.</p>
-          <button class="botao-claro" type="button" data-voltar>Voltar à calculadora</button>
-        </div>
+  <div class="miolo">
+    <p class="conta" aria-hidden="true"><span class="conta-a">23 + 14</span> <span class="conta-b"><span class="conta-igual"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path fill="currentColor" d="M27 26h46a9 9 0 0 1 0 18H27a9 9 0 0 1 0-18Zm0 23h46a9 9 0 0 1 0 18H42.5L31 77c-1.900 1.700-3.500.800-3.500-1.500V67H27a9 9 0 0 1 0-18Z"/></svg></span> suas</span> <span class="conta-c">conversas</span></p>
+    <div class="abertura-grade">
+      <div class="abertura-texto">
+        <h1>Conversas protegidas atrás de uma calculadora.</h1>
+        <p>O Contatinho abre numa calculadora que funciona de verdade. A conta que você escolheu leva às suas conversas, cifradas de ponta a ponta.</p>
       </div>
-      <p class="calc-dica">Experimente: 23 + 14 =</p>
-      <noscript><p class="calc-sem-js">A demonstração precisa de JavaScript. O resto do site funciona sem ele.</p></noscript>
+      <div class="palco">
+        <div class="celular" data-calc data-aberto="0">
+          <div class="celular-tela">
+            <div class="status" aria-hidden="true"><span>9:41</span><span class="status-ilha"></span><span class="status-sinal"></span></div>
+            <div class="tela tela--calc" role="group" aria-label="Calculadora de demonstração">
+              <div class="visor">
+                <span class="visor-conta" aria-hidden="true"></span>
+                <output aria-live="polite">0</output>
+              </div>
+              <div class="teclado">
+                <button class="tecla tecla--fn" type="button" data-k="ac" aria-label="Limpar">AC</button>
+                <button class="tecla tecla--fn" type="button" data-k="apagar" aria-label="Apagar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 5.5h11v13H9l-6-6.5zM12.5 9.5l5 5M17.5 9.5l-5 5"/></svg></button>
+                <button class="tecla tecla--fn" type="button" data-k="%" aria-label="Porcentagem">%</button>
+                <button class="tecla tecla--op" type="button" data-k="/" aria-label="Dividir">÷</button>
+                <button class="tecla" type="button" data-k="7">7</button>
+                <button class="tecla" type="button" data-k="8">8</button>
+                <button class="tecla" type="button" data-k="9">9</button>
+                <button class="tecla tecla--op" type="button" data-k="*" aria-label="Multiplicar">×</button>
+                <button class="tecla" type="button" data-k="4">4</button>
+                <button class="tecla" type="button" data-k="5">5</button>
+                <button class="tecla" type="button" data-k="6">6</button>
+                <button class="tecla tecla--op" type="button" data-k="-" aria-label="Menos">−</button>
+                <button class="tecla" type="button" data-k="1">1</button>
+                <button class="tecla" type="button" data-k="2">2</button>
+                <button class="tecla" type="button" data-k="3">3</button>
+                <button class="tecla tecla--op" type="button" data-k="+" aria-label="Mais">+</button>
+                <button class="tecla tecla--fn" type="button" data-k="sinal" aria-label="Trocar o sinal">±</button>
+                <button class="tecla" type="button" data-k="0">0</button>
+                <button class="tecla" type="button" data-k="." aria-label="Vírgula">,</button>
+                <button class="tecla tecla--igual" type="button" data-k="=" aria-label="Igual">=</button>
+              </div>
+            </div>
+            <div class="tela tela--app" aria-hidden="true" inert>
+              <div class="app-topo"><span class="app-titulo">Conversas</span><span class="app-chip">Offline</span></div>
+              <ul class="app-lista">
+                <li><span class="avatar avatar--a">A</span><span class="linha"><b>Ana</b><small>A surpresa da mãe tá de pé?</small></span><span class="meta"><small>19:42</small><i>2</i></span></li>
+                <li><span class="avatar avatar--b">B</span><span class="linha"><b>Bruno</b><small>Mandei o orçamento</small></span><span class="meta"><small>18:10</small></span></li>
+                <li><span class="avatar avatar--c">M</span><span class="linha"><b>Mãe</b><small>Foto</small></span><span class="meta"><small>17:03</small></span></li>
+                <li><span class="avatar avatar--e">C</span><span class="linha"><b>Carla</b><small>Áudio de 0:14</small></span><span class="meta"><small>Ontem</small></span></li>
+                <li><span class="avatar avatar--b">P</span><span class="linha"><b>Pedro</b><small>Valeu!</small></span><span class="meta"><small>Ontem</small></span></li>
+                <li><span class="avatar avatar--d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 5h18v4H3zM5 9v10h14V9M10 13h4"/></svg></span><span class="linha"><b>Arquivo</b></span></li>
+              </ul>
+              <div class="app-abas"><span class="ativa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5h16v11H9l-5 4z"/></svg>Conversas</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Desconhecidos</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></svg>Ajustes</span></div>
+            </div>
+          </div>
+        </div>
+        <p class="legenda" data-legenda aria-live="polite">Experimente: 23 + 14 =</p>
+        <button class="botao" type="button" data-voltar hidden>Voltar à calculadora</button>
+        <noscript><p class="legenda">A demonstração precisa de JavaScript. O resto do site funciona sem ele.</p></noscript>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="secao" aria-labelledby="como">
   <div class="miolo">
-    <h2 id="como">Como funciona</h2>
+    <h2 id="como" class="titulo-grande">A calculadora é o cadeado</h2>
     <ol class="passos">
       <li><h3>Escolha a sua conta secreta</h3><p>É uma conta de dois números, como 23 + 14. Só ela leva da calculadora ao chat.</p></li>
       <li><h3>Passe o seu código</h3><p>Para criar a conta não pedimos telefone nem e-mail. Você cria um código e passa para quem quiser.</p></li>
-      <li><h3>Converse</h3><p>Textos, fotos, vídeos e áudios são cifrados no seu aparelho. Só você e a outra pessoa conseguem abrir.</p></li>
+      <li><h3>Converse</h3><p>Textos, fotos, vídeos e áudios são cifrados no seu aparelho. Só você e a outra pessoa conseguem abrir. <a href="privacidade.html#limites">Veja os limites</a>.</p></li>
     </ol>
   </div>
 </section>
 
-<section class="secao" aria-labelledby="protege">
-  <div class="miolo">
-    <h2 id="protege">O que protege e o que não protege</h2>
-    <div class="sinais">
-      <div>
-        <h3>Protege você</h3>
-        <ul>
-          <li><span class="sinal" aria-hidden="true">=</span><span>De quem pega o seu celular desbloqueado.</span></li>
-          <li><span class="sinal" aria-hidden="true">=</span><span>De quem obriga você a abrir: a senha de mentira mostra o Arquivo vazio.</span></li>
-          <li><span class="sinal" aria-hidden="true">=</span><span>Das cópias dos arquivos do celular: tudo fica cifrado, com a chave presa no aparelho.</span></li>
-          <li><span class="sinal" aria-hidden="true">=</span><span>De servidor invadido ou ordem judicial: nós não temos o conteúdo das conversas.</span></li>
-          <li><span class="sinal" aria-hidden="true">=</span><span>Da galeria, do backup do Google e do iCloud e de prints no Android.</span></li>
-        </ul>
+<section class="faixa faixa--tinta" aria-labelledby="protege">
+  <div class="miolo faixa-grade">
+    <div class="celular celular--conversa" role="img" aria-label="Tela de uma conversa no app, com o aviso de mensagens cifradas de ponta a ponta">
+      <div class="celular-tela" aria-hidden="true">
+        <div class="status"><span>9:41</span><span class="status-ilha"></span><span class="status-sinal"></span></div>
+        <div class="conversa-topo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7"/></svg><span class="avatar avatar--a">A</span><b>Ana</b></div>
+        <div class="conversa-corpo">
+          <p class="conversa-aviso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Mensagens cifradas de ponta a ponta. Só vocês dois conseguem ler.</p>
+          <p class="fala">A surpresa da mãe tá de pé?<small>19:40</small></p>
+          <p class="fala fala--minha">Tá sim. Bolo encomendado.<small>19:41</small></p>
+          <p class="fala fala--foto"><span class="fala-foto" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8.5h3l1.6-2.5h6.8L17 8.5h3V19H4z"/><circle cx="12" cy="13.500" r="3.300"/></svg></span>Olha o bolo<small>19:41</small></p>
+          <p class="fala fala--minha">Perfeito.<small>19:41</small></p>
+          <p class="fala">Fechado. Levo os balões.<small>19:42</small></p>
+        </div>
+        <div class="conversa-compor"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8.5h3l1.6-2.5h6.8L17 8.5h3V19H4z"/><circle cx="12" cy="13.500" r="3.300"/></svg><span>Mensagem</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.500 11a6.500 6.500 0 0 0 13 0M12 17.500V21"/></svg></div>
       </div>
-      <div class="nao">
-        <h3>Não protege você</h3>
-        <ul>
-          <li><span class="sinal" aria-hidden="true">≠</span><span>Em celular com vírus ou programa espião, ou com root ou jailbreak, com o app aberto.</span></li>
-          <li><span class="sinal" aria-hidden="true">≠</span><span>De quem sabe a sua senha verdadeira.</span></li>
-          <li><span class="sinal" aria-hidden="true">≠</span><span>De foto da tela tirada com outro celular.</span></li>
-          <li><span class="sinal" aria-hidden="true">≠</span><span>Dos dados que a lei manda guardar, como registros de acesso.</span></li>
-          <li><span class="sinal" aria-hidden="true">≠</span><span>De prints no iPhone: o sistema não deixa bloquear.</span></li>
-          <li><span class="sinal" aria-hidden="true">≠</span><span>Quando a outra pessoa denuncia: a moderação vê o que ela enviar.</span></li>
-        </ul>
-      </div>
+    </div>
+    <div class="faixa-texto">
+      <h2 id="protege" class="titulo-grande">O que protege</h2>
+      <ul class="sinais">
+        <li><span class="sinal" aria-hidden="true">=</span><span>De quem pega o seu celular desbloqueado.</span></li>
+        <li><span class="sinal" aria-hidden="true">=</span><span>De quem obriga você a abrir: a senha de mentira mostra o Arquivo vazio.</span></li>
+        <li><span class="sinal" aria-hidden="true">=</span><span>Das cópias dos arquivos do celular: tudo fica cifrado, com a chave presa no aparelho.</span></li>
+        <li><span class="sinal" aria-hidden="true">=</span><span>De servidor invadido ou ordem judicial: nós não temos o conteúdo das conversas.</span></li>
+        <li><span class="sinal" aria-hidden="true">=</span><span>Da galeria, do backup do Google e do iCloud e de prints no Android.</span></li>
+      </ul>
+      <p><a href="privacidade.html#limites">Veja o que o app não protege</a></p>
     </div>
   </div>
 </section>
 
-<section class="secao secao--lado" aria-labelledby="quem">
-  <div class="miolo">
-    <h2 id="quem">Você decide quem fala com você</h2>
-    <div class="secao-texto">
-      <p>O app começa Offline: só quem tem o seu código consegue fazer o primeiro contato. O pedido chega separado, só com texto, e você aceita, apaga, bloqueia ou denuncia. Até você aceitar, a pessoa não manda mais nada.</p>
+<section class="secao" aria-labelledby="quem">
+  <div class="miolo dupla">
+    <div class="dupla-texto">
+      <h2 id="quem" class="titulo-grande">Você decide quem fala com você</h2>
+      <p>O app começa Offline: só quem tem o seu código consegue fazer o primeiro contato. O pedido chega separado, só com texto. Até você aceitar, a pessoa não manda mais nada.</p>
       <p>O modo Online é opcional e exige idade confirmada. Com ele ligado, outras pessoas adultas podem achar você na busca por apelido ou código.</p>
     </div>
+    <div class="pedido" role="img" aria-label="Um pedido de contato, com as opções aceitar, apagar, bloquear e denunciar">
+      <div aria-hidden="true">
+        <p class="app-titulo pedido-titulo">Desconhecidos</p>
+        <div class="pedido-topo"><span class="avatar avatar--b">R</span><span class="linha"><b>Rafa</b><small>@rafa pediu para conversar</small></span></div>
+        <p class="pedido-texto">Oi, aqui é o Rafa, do trabalho. Peguei seu código com a Bia.</p>
+        <div class="pedido-acoes"><span class="pedido-aceitar">Aceitar</span><span>Apagar</span><span>Bloquear</span><span>Denunciar</span></div>
+        <p class="pedido-nota">Até você aceitar, a pessoa não pode mandar mais nada nem fotos.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="secao secao--lado" aria-labelledby="esconder">
-  <div class="miolo">
-    <h2 id="esconder">Conversas que ficam fora da lista</h2>
-    <div class="secao-texto">
+<section class="faixa faixa--ceu" aria-labelledby="esconder">
+  <div class="miolo dupla dupla--invertida">
+    <div class="dupla-texto">
+      <h2 id="esconder" class="titulo-grande">Conversas que ficam fora da lista</h2>
       <p>Uma conversa escondida sai da lista e vai para o Arquivo, que abre com a sua senha verdadeira. A senha de mentira abre o mesmo Arquivo, vazio.</p>
       <p>Ninguém consegue recuperar a senha verdadeira, nem nós. Se você esquecer, perde o que está no Arquivo.</p>
       <p>Esconder conversas vai fazer parte do Plano anual, que ainda não está à venda.</p>
     </div>
-  </div>
-</section>
-
-<section class="secao secao--lado" aria-labelledby="idade">
-  <div class="miolo">
-    <h2 id="idade">Só para maiores de 18 anos</h2>
-    <div class="secao-texto">
-      <p>Você pode bloquear e denunciar qualquer pessoa. As denúncias vão para a nossa moderação, que pode advertir, suspender ou encerrar contas.</p>
-      <p>Conheça as regras em <a href="termos.html">Termos de uso</a> e <a href="seguranca-infantil.html">Segurança infantil</a>.</p>
+    <div class="senhas" role="img" aria-label="Duas telas do Arquivo: a senha verdadeira mostra as conversas escondidas e a senha de mentira mostra o Arquivo vazio">
+      <div class="senha" aria-hidden="true">
+        <p class="senha-rotulo">Senha verdadeira</p>
+        <div class="senha-tela"><span class="app-titulo">Arquivo</span>
+          <ul class="app-lista"><li><span class="avatar avatar--a">L</span><span class="linha"><b>Léo</b><small>Combinado</small></span></li><li><span class="avatar avatar--c">T</span><span class="linha"><b>Tia Vera</b><small>Foto</small></span></li></ul>
+        </div>
+      </div>
+      <div class="senha" aria-hidden="true">
+        <p class="senha-rotulo">Senha de mentira</p>
+        <div class="senha-tela"><span class="app-titulo">Arquivo</span>
+          <div class="senha-vazia"><b>Nenhuma conversa arquivada</b><small>As conversas que você esconder aparecem aqui.</small></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="estado" aria-labelledby="pe">
-  <div class="miolo">
-    <h2 id="pe">O Contatinho está em teste</h2>
-    <p>Ele ainda não está na Google Play nem na App Store, então não há o que baixar por aqui. Quando estiver disponível, os links aparecem nesta página.</p>
+<section class="fecho" aria-labelledby="idade">
+  <div class="miolo fecho-grade">
+    <p class="fecho-numero" aria-hidden="true">18+</p>
+    <div class="fecho-texto">
+      <h2 id="idade" class="titulo-grande">Só para maiores de 18 anos</h2>
+      <p>Você pode bloquear e denunciar qualquer pessoa. As denúncias vão para a nossa moderação, que pode advertir, suspender ou encerrar contas. Conheça as regras em <a href="termos.html">Termos de uso</a> e <a href="seguranca-infantil.html">Segurança infantil</a>.</p>
+      <h2 class="fecho-estado">O Contatinho está em teste</h2>
+      <p>Ele ainda não está na Google Play nem na App Store, então não há o que baixar por aqui. Quando estiver disponível, os links aparecem nesta página.</p>
+    </div>
   </div>
 </section>
 
 </main>
 <footer class="rodape">
 <div class="miolo">
+<a class="marca" href="index.html" aria-label="Contatinho, início"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path fill="currentColor" d="M27 26h46a9 9 0 0 1 0 18H27a9 9 0 0 1 0-18Zm0 23h46a9 9 0 0 1 0 18H42.5L31 77c-1.900 1.700-3.500.800-3.500-1.500V67H27a9 9 0 0 1 0-18Z"/></svg><span>Contatinho</span></a>
 <ul>
 <li><a href="index.html">Início</a></li>
 <li><a href="privacidade.html">Privacidade</a></li>
