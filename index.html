@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contatinho: conversas protegidas atrás de uma calculadora</title>
+<meta name="description" content="App de mensagens para maiores de 18 anos, com criptografia de ponta a ponta, que abre numa calculadora. Em teste.">
+<link rel="canonical" href="https://contatinho.app/">
+<meta name="theme-color" content="#5ea0f1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icone-180.png">
+<link rel="stylesheet" href="estilo.css">
+<script src="calculadora.js" defer></script>
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<header class="topo abertura">
+<div class="miolo">
+<a class="marca" href="index.html" aria-label="Contatinho, início"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path fill="currentColor" d="M27 26h46a9 9 0 0 1 0 18H27a9 9 0 0 1 0-18Zm0 23h46a9 9 0 0 1 0 18H42.5L31 77c-1.900 1.700-3.500.800-3.500-1.500V67H27a9 9 0 0 1 0-18Z"/></svg><span>Contatinho</span></a>
+<nav aria-label="Principal"><a href="suporte.html">Suporte</a></nav>
+</div>
+</header>
+<main id="conteudo">
+<section class="abertura">
+  <div class="miolo abertura-grade">
+    <div class="abertura-texto">
+      <h1>Conversas protegidas atrás de uma calculadora.</h1>
+      <p>O Contatinho abre numa calculadora que funciona de verdade. A conta que você escolheu leva às suas conversas, cifradas de ponta a ponta.</p>
+    </div>
+    <div>
+      <div class="calc" data-calc role="group" aria-label="Calculadora de demonstração">
+        <div class="calc-visor">
+          <span class="calc-conta" aria-hidden="true"></span>
+          <output aria-live="polite">0</output>
+        </div>
+        <div class="calc-teclas">
+          <button class="tecla tecla--op" type="button" data-k="c" aria-label="Limpar">C</button>
+          <button class="tecla tecla--op" type="button" data-k="apagar" aria-label="Apagar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" d="M9 5h11a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H9l-6-7zM12 9.500l5 5M17 9.500l-5 5"/></svg></button>
+          <button class="tecla tecla--op" type="button" data-k="/" aria-label="Dividir">÷</button>
+          <button class="tecla tecla--op" type="button" data-k="*" aria-label="Multiplicar">×</button>
+          <button class="tecla" type="button" data-k="7">7</button>
+          <button class="tecla" type="button" data-k="8">8</button>
+          <button class="tecla" type="button" data-k="9">9</button>
+          <button class="tecla tecla--op" type="button" data-k="-" aria-label="Menos">−</button>
+          <button class="tecla" type="button" data-k="4">4</button>
+          <button class="tecla" type="button" data-k="5">5</button>
+          <button class="tecla" type="button" data-k="6">6</button>
+          <button class="tecla tecla--op" type="button" data-k="+" aria-label="Mais">+</button>
+          <button class="tecla" type="button" data-k="1">1</button>
+          <button class="tecla" type="button" data-k="2">2</button>
+          <button class="tecla" type="button" data-k="3">3</button>
+          <button class="tecla tecla--igual" type="button" data-k="=" aria-label="Igual"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path fill="currentColor" d="M27 26h46a9 9 0 0 1 0 18H27a9 9 0 0 1 0-18Zm0 23h46a9 9 0 0 1 0 18H42.5L31 77c-1.900 1.700-3.500.800-3.500-1.500V67H27a9 9 0 0 1 0-18Z"/></svg></button>
+          <button class="tecla tecla--zero" type="button" data-k="0">0</button>
+          <button class="tecla" type="button" data-k="." aria-label="Vírgula">,</button>
+        </div>
+        <div class="calc-aberta" hidden>
+          <h2>Abriu.</h2>
+          <p class="balao">A conta certa leva às conversas.</p>
+          <p class="balao balao--cauda">No app, quem escolhe a conta é você.</p>
+          <button class="botao-claro" type="button" data-voltar>Voltar à calculadora</button>
+        </div>
+      </div>
+      <p class="calc-dica">Experimente: 23 + 14 =</p>
+      <noscript><p class="calc-sem-js">A demonstração precisa de JavaScript. O resto do site funciona sem ele.</p></noscript>
+    </div>
+  </div>
+</section>
+
+<section class="secao" aria-labelledby="como">
+  <div class="miolo">
+    <h2 id="como">Como funciona</h2>
+    <ol class="passos">
+      <li><h3>Escolha a sua conta secreta</h3><p>É uma conta de dois números, como 23 + 14. Só ela leva da calculadora ao chat.</p></li>
+      <li><h3>Passe o seu código</h3><p>Para criar a conta não pedimos telefone nem e-mail. Você cria um código e passa para quem quiser.</p></li>
+      <li><h3>Converse</h3><p>Textos, fotos, vídeos e áudios são cifrados no seu aparelho. Só você e a outra pessoa conseguem abrir.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="secao" aria-labelledby="protege">
+  <div class="miolo">
+    <h2 id="protege">O que protege e o que não protege</h2>
+    <div class="sinais">
+      <div>
+        <h3>Protege você</h3>
+        <ul>
+          <li><span class="sinal" aria-hidden="true">=</span><span>De quem pega o seu celular desbloqueado.</span></li>
+          <li><span class="sinal" aria-hidden="true">=</span><span>De quem obriga você a abrir: a senha de mentira mostra o Arquivo vazio.</span></li>
+          <li><span class="sinal" aria-hidden="true">=</span><span>Das cópias dos arquivos do celular: tudo fica cifrado, com a chave presa no aparelho.</span></li>
+          <li><span class="sinal" aria-hidden="true">=</span><span>De servidor invadido ou ordem judicial: nós não temos o conteúdo das conversas.</span></li>
+          <li><span class="sinal" aria-hidden="true">=</span><span>Da galeria, do backup do Google e do iCloud e de prints no Android.</span></li>
+        </ul>
+      </div>
+      <div class="nao">
+        <h3>Não protege você</h3>
+        <ul>
+          <li><span class="sinal" aria-hidden="true">≠</span><span>Em celular com vírus ou programa espião, ou com root ou jailbreak, com o app aberto.</span></li>
+          <li><span class="sinal" aria-hidden="true">≠</span><span>De quem sabe a sua senha verdadeira.</span></li>
+          <li><span class="sinal" aria-hidden="true">≠</span><span>De foto da tela tirada com outro celular.</span></li>
+          <li><span class="sinal" aria-hidden="true">≠</span><span>Dos dados que a lei manda guardar, como registros de acesso.</span></li>
+          <li><span class="sinal" aria-hidden="true">≠</span><span>De prints no iPhone: o sistema não deixa bloquear.</span></li>
+          <li><span class="sinal" aria-hidden="true">≠</span><span>Quando a outra pessoa denuncia: a moderação vê o que ela enviar.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao secao--lado" aria-labelledby="quem">
+  <div class="miolo">
+    <h2 id="quem">Você decide quem fala com você</h2>
+    <div class="secao-texto">
+      <p>O app começa Offline: só quem tem o seu código consegue fazer o primeiro contato. O pedido chega separado, só com texto, e você aceita, apaga, bloqueia ou denuncia. Até você aceitar, a pessoa não manda mais nada.</p>
+      <p>O modo Online é opcional e exige idade confirmada. Com ele ligado, outras pessoas adultas podem achar você na busca por apelido ou código.</p>
+    </div>
+  </div>
+</section>
+
+<section class="secao secao--lado" aria-labelledby="esconder">
+  <div class="miolo">
+    <h2 id="esconder">Conversas que ficam fora da lista</h2>
+    <div class="secao-texto">
+      <p>Uma conversa escondida sai da lista e vai para o Arquivo, que abre com a sua senha verdadeira. A senha de mentira abre o mesmo Arquivo, vazio.</p>
+      <p>Ninguém consegue recuperar a senha verdadeira, nem nós. Se você esquecer, perde o que está no Arquivo.</p>
+      <p>Esconder conversas vai fazer parte do Plano anual, que ainda não está à venda.</p>
+    </div>
+  </div>
+</section>
+
+<section class="secao secao--lado" aria-labelledby="idade">
+  <div class="miolo">
+    <h2 id="idade">Só para maiores de 18 anos</h2>
+    <div class="secao-texto">
+      <p>Você pode bloquear e denunciar qualquer pessoa. As denúncias vão para a nossa moderação, que pode advertir, suspender ou encerrar contas.</p>
+      <p>Conheça as regras em <a href="termos.html">Termos de uso</a> e <a href="seguranca-infantil.html">Segurança infantil</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="estado" aria-labelledby="pe">
+  <div class="miolo">
+    <h2 id="pe">O Contatinho está em teste</h2>
+    <p>Ele ainda não está na Google Play nem na App Store, então não há o que baixar por aqui. Quando estiver disponível, os links aparecem nesta página.</p>
+  </div>
+</section>
+
+</main>
+<footer class="rodape">
+<div class="miolo">
+<ul>
+<li><a href="index.html">Início</a></li>
+<li><a href="privacidade.html">Privacidade</a></li>
+<li><a href="termos.html">Termos</a></li>
+<li><a href="excluir-conta.html">Excluir conta</a></li>
+<li><a href="seguranca-infantil.html">Segurança infantil</a></li>
+<li><a href="suporte.html">Suporte</a></li>
+</ul>
+<p>Responsável: VEXMENU LTDA, CNPJ 63.913.759/0001-85. Contato: <a href="mailto:dev@vexcode.com.br">dev@vexcode.com.br</a></p>
+<p>Versão de 2 de novembro de 2026. Este site não usa cookies nem rastreadores.</p>
+</div>
+</footer>
+</body>
+</html>
