@@ -22,7 +22,7 @@
 </div>
 </header>
 <main id="conteudo">
-<section class="abertura doc-faixa"><div class="miolo"><h1>Política de privacidade</h1><p>Versão de 2 de novembro de 2026</p></div></section><div class="miolo doc"><p class="rascunho">Rascunho. Este texto ainda precisa ser revisado por advogado antes de o app ir para as lojas.</p><div class="doc-corpo doc-corpo--indice">
+<section class="abertura doc-faixa"><div class="miolo"><h1>Política de privacidade</h1><p>Versão de 2 de novembro de 2026</p></div></section><div class="miolo doc"><div class="doc-corpo doc-corpo--indice">
 <nav class="indice" aria-label="Nesta página">
   <span class="indice-titulo">Nesta página</span>
   <ol>
@@ -89,6 +89,7 @@
     <tr><td data-rotulo="Dado">Situação da assinatura, quando houver</td><td data-rotulo="Para quê">Liberar o Plano anual</td><td data-rotulo="Por quanto tempo">Enquanto a conta existir</td></tr>
     <tr><td data-rotulo="Dado">Identificador de aviso do celular, quando os avisos estiverem ligados</td><td data-rotulo="Para quê">Avisar que há mensagem nova, sem conteúdo</td><td data-rotulo="Por quanto tempo">Enquanto a conta existir</td></tr>
     <tr><td data-rotulo="Dado">Registros de acesso: IP, data, hora e porta</td><td data-rotulo="Para quê">Obrigação do Marco Civil da Internet</td><td data-rotulo="Por quanto tempo">6 meses</td></tr>
+    <tr><td data-rotulo="Dado">Token da loja que identifica o aparelho (Google ou Apple), renovado a cada 7 dias</td><td data-rotulo="Para quê">Poder marcar o aparelho se a conta for banida. O token só abre na loja, com as nossas credenciais</td><td data-rotulo="Por quanto tempo">Até 14 dias. Cada renovação substitui o anterior</td></tr>
     <tr><td data-rotulo="Dado">Punições e marca de aparelho banido</td><td data-rotulo="Para quê">Fazer valer a decisão da moderação</td><td data-rotulo="Por quanto tempo">Até o prazo da punição. A marca do aparelho é revista depois de 2 anos</td></tr>
   </tbody>
 </table>
@@ -109,8 +110,8 @@
 <h2 id="compartilhar">Com quem compartilhamos</h2>
 <p>Não vendemos dados e não usamos ferramentas de anúncio ou de análise de uso.</p>
 <ul>
-  <li><strong>Google e Apple:</strong> conferem a integridade do app, a idade informada pela loja e a assinatura, quando houver.</li>
-  <li><strong>Hospedagem:</strong> o fornecedor do servidor de produção ainda não foi definido. Veja <a href="#local">Onde os dados ficam</a>.</li>
+  <li><strong>Google e Apple:</strong> conferem a integridade do app, a idade informada pela loja e a assinatura, quando houver, e entregam os avisos de mensagem nova, sem conteúdo.</li>
+  <li><strong>Hospedagem:</strong> Hostinger. Veja <a href="#local">Onde os dados ficam</a>.</li>
   <li><strong>Autoridades:</strong> só com ordem judicial, e só o que temos: código, datas, endereços de IP, pares de contato, perfil público e denúncias. Conteúdo de conversa nós não temos. Casos de abuso infantil são comunicados às autoridades.</li>
 </ul>
 
@@ -125,13 +126,14 @@
 <p>A Lei Geral de Proteção de Dados garante, entre outros, confirmar se tratamos os seus dados, acessá-los, corrigi-los e pedir a exclusão. Você exclui a conta dentro do app. Para o resto, escreva para <a href="mailto:dev@vexcode.com.br">dev@vexcode.com.br</a>. Como a conta não tem telefone nem e-mail, vamos pedir o seu código. Você também pode procurar a Autoridade Nacional de Proteção de Dados.</p>
 
 <h2 id="local">Onde os dados ficam</h2>
-<p>O servidor de produção ainda não existe. Hoje o app funciona só em teste, com um grupo fechado, num servidor de teste. Quando o servidor de produção for contratado, esta página vai dizer quem hospeda os dados e em que país.</p>
+<p>O servidor do Contatinho fica no Brasil, contratado da Hostinger.</p>
+<p>Fazemos cópias de segurança uma vez por dia, cifradas antes de sair do banco de dados, e uma delas é guardada fora do servidor, em computador nosso. As mídias não entram nessas cópias. Cada cópia é substituída pela seguinte, então um dado apagado pode continuar nelas por até 5 semanas.</p>
 
 <h2 id="idade">Idade mínima</h2>
 <p>O Contatinho é só para maiores de 18 anos. Se uma denúncia indicar que a conta é de menor, a moderação pode exigir uma nova checagem de idade ou encerrar a conta.</p>
 
 <h2 id="site">Este site</h2>
-<p>Este site não usa cookies, rastreadores nem fontes ou scripts de terceiros. Ele fica no GitHub Pages, e o GitHub pode registrar o endereço IP de quem visita. A calculadora da página inicial funciona só na sua tela e não envia nada.</p>
+<p>Este site não usa cookies, rastreadores nem fontes ou scripts de terceiros. O servidor que entrega as páginas pode registrar o endereço IP de quem visita. A calculadora da página inicial funciona só na sua tela e não envia nada.</p>
 
 <h2 id="mudancas">Mudanças nesta política</h2>
 <p>Mudanças nesta política são publicadas nesta página. A versão no início da página mostra quando ela mudou.</p>

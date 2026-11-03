@@ -210,8 +210,6 @@ a:hover{color:var(--tinta);text-decoration-thickness:2px}
 .doc-faixa h1{font-size:clamp(2.75rem,8vw,5.5rem);font-weight:400;letter-spacing:-.025em;line-height:1}
 .doc-faixa p{margin-top:1rem}
 .doc{padding-block:2.5rem 5rem}
-.rascunho{position:relative;background:var(--azul-fundo);border-radius:1.25rem;padding:1rem 1.25rem;margin-bottom:2.75rem;max-width:var(--medida)}
-.rascunho::after{content:"";position:absolute;left:1.5rem;bottom:-.75rem;width:1.375rem;height:.875rem;background:var(--azul-fundo);clip-path:polygon(0 0,100% 0,0 100%)}
 .doc-corpo{display:grid;gap:2rem}
 .indice{font-size:1rem}
 .indice ol{list-style:none;margin:.5rem 0 0;padding:0;display:grid;gap:.25rem}
