@@ -3,199 +3,248 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Contatinho: conversas protegidas atrás de uma calculadora</title>
 <meta name="description" content="App de mensagens para maiores de 18 anos, com criptografia de ponta a ponta, que abre numa calculadora.">
 <link rel="canonical" href="https://contatinho.app/">
-<meta name="theme-color" content="#5ea0f1">
+<meta name="theme-color" content="#1660cf" media="(max-width: 979px)">
+<meta name="theme-color" content="#e8f0fd" media="(min-width: 980px)">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icone-180.png">
-<link rel="stylesheet" href="estilo.css">
-<script src="calculadora.js" defer></script>
+<link rel="preload" href="fontes/mona.woff2" as="font" type="font/woff2" crossorigin media="(max-width: 979px)">
+<link rel="preload" href="fontes/gabarito.woff2" as="font" type="font/woff2" crossorigin media="(min-width: 980px)">
+<link rel="stylesheet" href="inicio.css">
+<script src="inicio.js" defer></script>
 </head>
-<body>
-<a class="pular" href="#conteudo">Pular para o conteúdo</a>
-<header class="topo abertura">
-<div class="miolo">
-<a class="marca" href="index.html" aria-label="Contatinho, início"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path fill="currentColor" d="M27 26h46a9 9 0 0 1 0 18H27a9 9 0 0 1 0-18Zm0 23h46a9 9 0 0 1 0 18H42.5L31 77c-1.900 1.700-3.500.800-3.500-1.500V67H27a9 9 0 0 1 0-18Z"/></svg><span>Contatinho</span></a>
-<nav aria-label="Principal"><a href="suporte.html">Suporte</a></nav>
+<body id="topo">
+
+<div class="v1">
+<a class="pular" href="#c1">Pular para o conteúdo</a>
+<header class="m1-nav"><a class="m1-marca" href="#topo" aria-label="Contatinho, início"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path fill="currentColor" d="M27 26h46a9 9 0 0 1 0 18H27a9 9 0 0 1 0-18Zm0 23h46a9 9 0 0 1 0 18H42.5L31 77c-1.900 1.700-3.500.800-3.500-1.500V67H27a9 9 0 0 1 0-18Z"/></svg><span>Contatinho</span></a><a class="m1-nav-b" href="#baixar-1">Baixar</a></header>
+<main id="c1">
+<div class="m1-her">
+<h1 class="m1-tit"><span class="m1-bal">Por fora, <br>uma calculadora.</span><span class="m1-bal m1-bal--2">Por dentro, <br>suas conversas.</span></h1>
+<div class="m1-her-b"><p>Mensagens cifradas de ponta a ponta, guardadas atrás de uma calculadora.</p><div class="m1-lojas"><a href="https://apps.apple.com/br/app/id6829813231">Baixar na App Store</a><a href="https://play.google.com/store/apps/details?id=com.vexmenu.calculadora">Baixar no Google Play</a></div></div>
+<div class="m1-cel"><div class="k" data-celular="filme" role="img" aria-label="Celular mostrando o Contatinho: chega um aviso que não diz de quem é nem o que diz; a calculadora abre a lista de conversas com a conta secreta; a Jhullye manda a foto da decoração e o vídeo do salão, que chegam cobertos e só aparecem quando você toca; você segura a conversa e esconde: ela vai para o Arquivo, que só abre com senha; dois toques no topo voltam para a calculadora.">
+<div class="k-corpo" aria-hidden="true"><div class="k-tela" data-tela>
+<div class="k-ilha"></div>
+<div class="k-push" data-push><span class="k-push-ic"><svg viewBox="0 0 24 24"><path d="M7 6.5v5M4.5 9h5M14.5 9h5M5 15.5l4 4M9 15.5l-4 4M14.5 16h5M14.5 19h5"/></svg></span><div><b>Calculadora</b><span>Novo cálculo disponível</span></div><time>agora</time></div>
+<div class="k-status"><span>19:42</span><span class="k-st"><svg viewBox="0 0 18 12"><path d="M1 8.5h2V11H1zM5.5 6h2v5h-2zM10 3.5h2V11h-2zM14.5 1h2v10h-2z"/></svg><svg viewBox="0 0 24 12"><rect x=".5" y=".5" width="20" height="11" rx="3" fill="none" stroke="currentColor"/><rect x="2" y="2" width="15" height="8" rx="1.5"/></svg></span></div>
+
+<section class="k-c k-calc" data-t="calc">
+<div class="k-visor"><span class="k-expr" data-expr>&nbsp;</span><span class="k-num" data-num>0</span></div>
+<div class="k-teclas">
+<i class="f" data-k="AC">AC</i><i class="f" data-k="⌫"><svg viewBox="0 0 24 24"><path d="M9 5.5h11v13H9l-6-6.5zM12.5 9.5l5 5M17.5 9.5l-5 5"/></svg></i><i class="f" data-k="%">%</i><i class="o" data-k="÷">÷</i>
+<i data-k="7">7</i><i data-k="8">8</i><i data-k="9">9</i><i class="o" data-k="×">×</i>
+<i data-k="4">4</i><i data-k="5">5</i><i data-k="6">6</i><i class="o" data-k="−">−</i>
+<i data-k="1">1</i><i data-k="2">2</i><i data-k="3">3</i><i class="o" data-k="+">+</i>
+<i data-k="±">±</i><i data-k="0">0</i><i data-k=",">,</i><i class="ig" data-k="=">=</i>
 </div>
-</header>
-<main id="conteudo">
-<section class="abertura">
-  <div class="miolo">
-    <p class="conta" aria-hidden="true"><span class="conta-a">23 + 14</span> <span class="conta-b"><span class="conta-igual"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path fill="currentColor" d="M27 26h46a9 9 0 0 1 0 18H27a9 9 0 0 1 0-18Zm0 23h46a9 9 0 0 1 0 18H42.5L31 77c-1.900 1.700-3.500.800-3.500-1.500V67H27a9 9 0 0 1 0-18Z"/></svg></span> suas</span> <span class="conta-c">conversas</span></p>
-    <div class="abertura-grade">
-      <div class="abertura-texto">
-        <h1>Conversas protegidas atrás de uma calculadora.</h1>
-        <p>O Contatinho abre numa calculadora que funciona de verdade. A conta que você escolheu leva às suas conversas, cifradas de ponta a ponta.</p>
-      </div>
-      <div class="palco">
-        <div class="celular" data-calc data-aberto="0">
-          <div class="celular-tela">
-            <div class="status" aria-hidden="true"><span>9:41</span><span class="status-ilha"></span><span class="status-sinal"></span></div>
-            <div class="tela tela--calc" role="group" aria-label="Calculadora de demonstração">
-              <div class="visor">
-                <span class="visor-conta" aria-hidden="true"></span>
-                <output aria-live="polite">0</output>
-              </div>
-              <div class="teclado">
-                <button class="tecla tecla--fn" type="button" data-k="ac" aria-label="Limpar">AC</button>
-                <button class="tecla tecla--fn" type="button" data-k="apagar" aria-label="Apagar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 5.5h11v13H9l-6-6.5zM12.5 9.5l5 5M17.5 9.5l-5 5"/></svg></button>
-                <button class="tecla tecla--fn" type="button" data-k="%" aria-label="Porcentagem">%</button>
-                <button class="tecla tecla--op" type="button" data-k="/" aria-label="Dividir">÷</button>
-                <button class="tecla" type="button" data-k="7">7</button>
-                <button class="tecla" type="button" data-k="8">8</button>
-                <button class="tecla" type="button" data-k="9">9</button>
-                <button class="tecla tecla--op" type="button" data-k="*" aria-label="Multiplicar">×</button>
-                <button class="tecla" type="button" data-k="4">4</button>
-                <button class="tecla" type="button" data-k="5">5</button>
-                <button class="tecla" type="button" data-k="6">6</button>
-                <button class="tecla tecla--op" type="button" data-k="-" aria-label="Menos">−</button>
-                <button class="tecla" type="button" data-k="1">1</button>
-                <button class="tecla" type="button" data-k="2">2</button>
-                <button class="tecla" type="button" data-k="3">3</button>
-                <button class="tecla tecla--op" type="button" data-k="+" aria-label="Mais">+</button>
-                <button class="tecla tecla--fn" type="button" data-k="sinal" aria-label="Trocar o sinal">±</button>
-                <button class="tecla" type="button" data-k="0">0</button>
-                <button class="tecla" type="button" data-k="." aria-label="Vírgula">,</button>
-                <button class="tecla tecla--igual" type="button" data-k="=" aria-label="Igual">=</button>
-              </div>
-            </div>
-            <div class="tela tela--app" aria-hidden="true" inert>
-              <div class="app-topo"><span class="app-titulo">Conversas</span><span class="app-chip">Offline</span></div>
-              <ul class="app-lista">
-                <li><span class="avatar avatar--a">A</span><span class="linha"><b>Ana</b><small>A surpresa da mãe tá de pé?</small></span><span class="meta"><small>19:42</small><i>2</i></span></li>
-                <li><span class="avatar avatar--b">B</span><span class="linha"><b>Bruno</b><small>Mandei o orçamento</small></span><span class="meta"><small>18:10</small></span></li>
-                <li><span class="avatar avatar--c">M</span><span class="linha"><b>Mãe</b><small>Foto</small></span><span class="meta"><small>17:03</small></span></li>
-                <li><span class="avatar avatar--e">C</span><span class="linha"><b>Carla</b><small>Áudio de 0:14</small></span><span class="meta"><small>Ontem</small></span></li>
-                <li><span class="avatar avatar--b">P</span><span class="linha"><b>Pedro</b><small>Valeu!</small></span><span class="meta"><small>Ontem</small></span></li>
-                <li><span class="avatar avatar--d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 5h18v4H3zM5 9v10h14V9M10 13h4"/></svg></span><span class="linha"><b>Arquivo</b></span></li>
-              </ul>
-              <div class="app-abas"><span class="ativa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5h16v11H9l-5 4z"/></svg>Conversas</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Desconhecidos</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></svg>Ajustes</span></div>
-            </div>
-          </div>
-        </div>
-        <p class="legenda" data-legenda aria-live="polite">Experimente: 23 + 14 =</p>
-        <button class="botao" type="button" data-voltar hidden>Voltar à calculadora</button>
-        <noscript><p class="legenda">A demonstração precisa de JavaScript. O resto do site funciona sem ele.</p></noscript>
-      </div>
-    </div>
-  </div>
 </section>
 
-<section class="secao" aria-labelledby="como">
-  <div class="miolo">
-    <h2 id="como" class="titulo-grande">A calculadora é o cadeado</h2>
-    <ol class="passos">
-      <li><h3>Escolha a sua conta secreta</h3><p>É uma conta de dois números, como 23 + 14. Só ela leva da calculadora ao chat.</p></li>
-      <li><h3>Passe o seu código</h3><p>Para criar a conta não pedimos telefone nem e-mail. Você cria um código e passa para quem quiser.</p></li>
-      <li><h3>Converse</h3><p>Textos, fotos, vídeos e áudios são cifrados no seu aparelho. Só você e a outra pessoa conseguem abrir. <a href="privacidade.html#limites">Veja os limites</a>.</p></li>
-    </ol>
-  </div>
+<section class="k-c k-lista" data-t="lista">
+<header class="k-l-topo"><h6>Conversas</h6><span class="k-selo">Offline</span></header>
+<div class="k-linhas">
+<div class="k-linha" data-jhu><span class="k-av k-av--d"><svg viewBox="0 0 24 24"><circle cx="16.6" cy="12" r="2.6"/><circle cx="14.3" cy="15.98" r="2.6"/><circle cx="9.7" cy="15.98" r="2.6"/><circle cx="7.4" cy="12" r="2.6"/><circle cx="9.7" cy="8.02" r="2.6"/><circle cx="14.3" cy="8.02" r="2.6"/><circle class="a" cx="12" cy="12" r="2.2"/></svg></span><div class="k-l-t"><b>Jhullye</b><span data-jhu-prev>A surpresa ainda tá de pé?</span></div><div class="k-l-m"><time data-jhu-hora>19:40</time><em data-naolidas>1</em></div></div>
+<div class="k-linha"><span class="k-av k-av--d"><svg viewBox="0 0 24 24"><path class="a" d="M3 9.5c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M3 14.5c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg></span><div class="k-l-t"><b>Celo</b><span>Mandei o orçamento</span></div><div class="k-l-m"><time>18:10</time></div></div>
+<div class="k-linha"><span class="k-av k-av--l">A</span><div class="k-l-t"><b>Alexa</b><span>Foto</span></div><div class="k-l-m"><time>17:03</time></div></div>
+<div class="k-linha"><span class="k-av k-av--d"><svg viewBox="0 0 24 24"><path d="M5 19C5 11 10 5 19 5c0 9-6 14-14 14z"/><path class="a" d="M5 19l9-9"/></svg></span><div class="k-l-t"><b>Pietro</b><span>Áudio de 0:14</span></div><div class="k-l-m"><time>Ontem</time></div></div>
+<div class="k-linha"><span class="k-av k-av--d"><svg viewBox="0 0 24 24"><path d="M5 10V4.5l4 3h6l4-3V10a7 7 0 0 1-14 0z"/><path class="a" d="M9.5 12h.01M14.5 12h.01"/></svg></span><div class="k-l-t"><b>Juca</b><span>Valeu!</span></div><div class="k-l-m"><time>Ontem</time></div></div>
+<div class="k-linha"><span class="k-av k-av--l">M</span><div class="k-l-t"><b>Mara</b><span>Combinado</span></div><div class="k-l-m"><time>Seg</time></div></div>
+<div class="k-linha k-linha--arq" data-arq-linha><span class="k-av k-av--i"><svg viewBox="0 0 24 24"><path d="M3 5h18v4H3zM5 9v10h14V9M10 13h4"/></svg></span><div class="k-l-t"><b>Arquivo</b></div></div>
+</div>
+<nav class="k-abas"><span class="on"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>Conversas</span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Desconhecidos</span><span><svg viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></svg>Ajustes</span></nav>
 </section>
 
-<section class="faixa faixa--tinta" aria-labelledby="protege">
-  <div class="miolo faixa-grade">
-    <div class="celular celular--conversa" role="img" aria-label="Tela de uma conversa no app, com o aviso de mensagens cifradas de ponta a ponta">
-      <div class="celular-tela" aria-hidden="true">
-        <div class="status"><span>9:41</span><span class="status-ilha"></span><span class="status-sinal"></span></div>
-        <div class="conversa-topo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7"/></svg><span class="avatar avatar--a">A</span><b>Ana</b></div>
-        <div class="conversa-corpo">
-          <p class="conversa-aviso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Mensagens cifradas de ponta a ponta. Só vocês dois conseguem ler.</p>
-          <p class="fala">A surpresa da mãe tá de pé?<small>19:40</small></p>
-          <p class="fala fala--minha">Tá sim. Bolo encomendado.<small>19:41</small></p>
-          <p class="fala fala--foto"><span class="fala-foto" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8.5h3l1.6-2.5h6.8L17 8.5h3V19H4z"/><circle cx="12" cy="13.500" r="3.300"/></svg></span>Olha o bolo<small>19:41</small></p>
-          <p class="fala fala--minha">Perfeito.<small>19:41</small></p>
-          <p class="fala">Fechado. Levo os balões.<small>19:42</small></p>
-        </div>
-        <div class="conversa-compor"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8.5h3l1.6-2.5h6.8L17 8.5h3V19H4z"/><circle cx="12" cy="13.500" r="3.300"/></svg><span>Mensagem</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.500 11a6.500 6.500 0 0 0 13 0M12 17.500V21"/></svg></div>
-      </div>
-    </div>
-    <div class="faixa-texto">
-      <h2 id="protege" class="titulo-grande">O que protege</h2>
-      <ul class="sinais">
-        <li><span class="sinal" aria-hidden="true">=</span><span>De quem pega o seu celular desbloqueado.</span></li>
-        <li><span class="sinal" aria-hidden="true">=</span><span>De quem obriga você a abrir: a senha de mentira mostra o Arquivo vazio.</span></li>
-        <li><span class="sinal" aria-hidden="true">=</span><span>Das cópias dos arquivos do celular: tudo fica cifrado, com a chave presa no aparelho.</span></li>
-        <li><span class="sinal" aria-hidden="true">=</span><span>De servidor invadido ou ordem judicial: nós não temos o conteúdo das conversas.</span></li>
-        <li><span class="sinal" aria-hidden="true">=</span><span>Da galeria, do backup do Google e do iCloud e de prints no Android.</span></li>
-      </ul>
-      <p><a href="privacidade.html#limites">Veja o que o app não protege</a></p>
-    </div>
-  </div>
+<section class="k-c k-conv on" data-t="conv">
+<header class="k-c-topo"><svg class="k-volta" data-volta viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg><span class="k-av k-av--p k-av--d"><svg viewBox="0 0 24 24"><circle cx="16.6" cy="12" r="2.6"/><circle cx="14.3" cy="15.98" r="2.6"/><circle cx="9.7" cy="15.98" r="2.6"/><circle cx="7.4" cy="12" r="2.6"/><circle cx="9.7" cy="8.02" r="2.6"/><circle cx="14.3" cy="8.02" r="2.6"/><circle class="a" cx="12" cy="12" r="2.2"/></svg></span><div class="k-c-n"><b>Jhullye</b><small data-sub>online agora</small></div><svg class="k-ppp" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="19" cy="12" r="1.2"/></svg></header>
+<div class="k-msgs">
+<p class="k-cif"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Mensagens cifradas de ponta a ponta. Só vocês dois conseguem ler.</p>
+<span class="k-dia">Hoje</span>
+<div class="k-m ela">Os 60 da Mara são sábado. Ela não pode nem sonhar<time>11:02</time></div>
+<div class="k-m eu">Pode deixar. Ela vive mexendo no meu celular<time>11:05</time></div>
+<div class="k-m ela">Por isso combinei tudo por aqui<time>11:06</time></div>
+<div class="k-m eu">O salão tá reservado<time>11:07</time></div>
+<div class="k-m ela">E o presente tá guardado aqui em casa<time>11:09</time></div>
+<div class="k-m ela" data-m="1">A surpresa ainda tá de pé?<time>19:40</time></div>
+<div class="k-m eu" data-m="2">Tá sim. Ninguém desconfia.<time>19:41</time></div>
+<figure class="k-m ela k-m--foto" data-m="3"><div class="k-quadro" data-foto><svg viewBox="0 0 24 24"><path d="M4 8.5h3l1.6-2.5h6.8L17 8.5h3V19H4z"/><circle cx="12" cy="13.5" r="3.3"/></svg><b>Foto</b><small>Toque para abrir</small></div><figcaption>A decoração<time>19:41</time></figcaption></figure>
+<div class="k-m eu k-m--audio" data-m="4"><span class="k-pl" data-play><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="k-onda"><svg viewBox="0 0 112 24"><path d="M1.5 4.0V20.0M6.0 5.0V19.0M10.5 6.0V18.0M14.9 9.0V15.0M19.4 7.0V17.0M23.9 7.0V17.0M28.4 4.0V20.0M32.9 9.0V15.0M37.3 3.0V21.0M41.8 9.0V15.0M46.3 7.0V17.0M50.8 6.0V18.0M55.3 6.0V18.0M59.7 7.0V17.0M64.2 3.0V21.0M68.7 7.0V17.0M73.2 6.0V18.0M77.7 9.0V15.0M82.1 7.0V17.0M86.6 3.0V21.0M91.1 9.0V15.0M95.6 6.0V18.0M100.1 9.0V15.0M104.5 3.0V21.0M109.0 9.0V15.0"/></svg><span class="k-onda-p" data-onda><svg viewBox="0 0 112 24"><path d="M1.5 4.0V20.0M6.0 5.0V19.0M10.5 6.0V18.0M14.9 9.0V15.0M19.4 7.0V17.0M23.9 7.0V17.0M28.4 4.0V20.0M32.9 9.0V15.0M37.3 3.0V21.0M41.8 9.0V15.0M46.3 7.0V17.0M50.8 6.0V18.0M55.3 6.0V18.0M59.7 7.0V17.0M64.2 3.0V21.0M68.7 7.0V17.0M73.2 6.0V18.0M77.7 9.0V15.0M82.1 7.0V17.0M86.6 3.0V21.0M91.1 9.0V15.0M95.6 6.0V18.0M100.1 9.0V15.0M104.5 3.0V21.0M109.0 9.0V15.0"/></svg></span></span><time>0:04</time></div>
+<figure class="k-m ela k-m--video" data-m="5"><div class="k-quadro" data-video><span class="k-pl"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span><b>Vídeo · 0:12</b><small>Toque para abrir</small></div><time>19:42</time></figure>
+<div class="k-m ela" data-m="6">Fechado. Sábado, 19h.<time>19:42</time></div>
+</div>
+<footer class="k-comp"><svg viewBox="0 0 24 24"><path d="M4 8.5h3l1.6-2.5h6.8L17 8.5h3V19H4z"/><circle cx="12" cy="13.5" r="3.3"/></svg><div class="k-campo" data-campo><span data-texto>Mensagem</span></div><span class="k-env" data-env><svg class="k-i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg><svg class="k-i-env" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></footer>
 </section>
 
-<section class="secao" aria-labelledby="quem">
-  <div class="miolo dupla">
-    <div class="dupla-texto">
-      <h2 id="quem" class="titulo-grande">Você decide quem fala com você</h2>
-      <p>O app começa Offline: só quem tem o seu código consegue fazer o primeiro contato. O pedido chega separado, só com texto. Até você aceitar, a pessoa não manda mais nada.</p>
-      <p>O modo Online é opcional e exige idade confirmada. Com ele ligado, outras pessoas adultas podem achar você na busca por apelido ou código.</p>
-    </div>
-    <div class="pedido" role="img" aria-label="Um pedido de contato, com as opções aceitar, apagar, bloquear e denunciar">
-      <div aria-hidden="true">
-        <p class="app-titulo pedido-titulo">Desconhecidos</p>
-        <div class="pedido-topo"><span class="avatar avatar--b">R</span><span class="linha"><b>Rafa</b><small>@rafa pediu para conversar</small></span></div>
-        <p class="pedido-texto">Oi, aqui é o Rafa, do trabalho. Peguei seu código com a Bia.</p>
-        <div class="pedido-acoes"><span class="pedido-aceitar">Aceitar</span><span>Apagar</span><span>Bloquear</span><span>Denunciar</span></div>
-        <p class="pedido-nota">Até você aceitar, a pessoa não pode mandar mais nada nem fotos.</p>
-      </div>
-    </div>
-  </div>
+<section class="k-c k-arq" data-t="arq">
+<header class="k-l-topo k-arq-topo"><svg class="k-volta" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg><h6>Arquivo</h6></header>
+<div class="k-linhas">
+<div class="k-linha"><span class="k-av k-av--d"><svg viewBox="0 0 24 24"><circle cx="16.6" cy="12" r="2.6"/><circle cx="14.3" cy="15.98" r="2.6"/><circle cx="9.7" cy="15.98" r="2.6"/><circle cx="7.4" cy="12" r="2.6"/><circle cx="9.7" cy="8.02" r="2.6"/><circle cx="14.3" cy="8.02" r="2.6"/><circle class="a" cx="12" cy="12" r="2.2"/></svg></span><div class="k-l-t"><b>Jhullye</b><span>Fechado. Sábado, 19h.</span></div><div class="k-l-m"><time>19:42</time></div></div>
+</div>
 </section>
 
-<section class="faixa faixa--ceu" aria-labelledby="esconder">
-  <div class="miolo dupla dupla--invertida">
-    <div class="dupla-texto">
-      <h2 id="esconder" class="titulo-grande">Conversas que ficam fora da lista</h2>
-      <p>Uma conversa escondida sai da lista e vai para o Arquivo, que abre com a sua senha verdadeira. A senha de mentira abre o mesmo Arquivo, vazio.</p>
-      <p>Ninguém consegue recuperar a senha verdadeira, nem nós. Se você esquecer, perde o que está no Arquivo.</p>
-      <p>Esconder conversas vai fazer parte do Plano anual, que ainda não está à venda.</p>
-    </div>
-    <div class="senhas" role="img" aria-label="Duas telas do Arquivo: a senha verdadeira mostra as conversas escondidas e a senha de mentira mostra o Arquivo vazio">
-      <div class="senha" aria-hidden="true">
-        <p class="senha-rotulo">Senha verdadeira</p>
-        <div class="senha-tela"><span class="app-titulo">Arquivo</span>
-          <ul class="app-lista"><li><span class="avatar avatar--a">L</span><span class="linha"><b>Léo</b><small>Combinado</small></span></li><li><span class="avatar avatar--c">T</span><span class="linha"><b>Tia Vera</b><small>Foto</small></span></li></ul>
-        </div>
-      </div>
-      <div class="senha" aria-hidden="true">
-        <p class="senha-rotulo">Senha de mentira</p>
-        <div class="senha-tela"><span class="app-titulo">Arquivo</span>
-          <div class="senha-vazia"><b>Nenhuma conversa arquivada</b><small>As conversas que você esconder aparecem aqui.</small></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="k-visu" data-visu><div class="k-visu-foto"><svg class="cena-foto" viewBox="0 0 240 190" aria-hidden="true" focusable="false"><rect width="240" height="190" fill="#1c2536"/><rect y="150" width="240" height="40" fill="#241f1d"/><rect y="150" width="240" height="1.5" fill="#3a302a"/><path d="M-4 20Q120 50 244 18" fill="none" stroke="#c3c2b7" stroke-opacity=".55" stroke-width="1"/><path d="M-1.5 22.2h14l-7 12z" fill="#f09978"/><path d="M17.6 26.1h14l-7 12z" fill="#6da7ec"/><path d="M36.7 29.2h14l-7 12z" fill="#f0eee6"/><path d="M55.8 31.7h14l-7 12z" fill="#55bf50"/><path d="M74.8 33.3h14l-7 12z" fill="#f09978"/><path d="M93.9 34.3h14l-7 12z" fill="#6da7ec"/><path d="M113.0 34.5h14l-7 12z" fill="#f0eee6"/><path d="M132.1 34.0h14l-7 12z" fill="#55bf50"/><path d="M151.2 32.7h14l-7 12z" fill="#f09978"/><path d="M170.2 30.7h14l-7 12z" fill="#6da7ec"/><path d="M189.3 28.0h14l-7 12z" fill="#f0eee6"/><path d="M208.4 24.6h14l-7 12z" fill="#55bf50"/><path d="M227.5 20.4h14l-7 12z" fill="#f09978"/><path d="M54 122C48 141 60 142.5 52 150" fill="none" stroke="#c3c2b7" stroke-opacity=".5" stroke-width=".9"/><ellipse cx="54" cy="92" rx="22" ry="27" fill="#2a78d6"/><path d="M51 123h6l-3-5z" fill="#2a78d6"/><ellipse cx="45.6" cy="80.7" rx="4.0" ry="7.0" fill="#fff" fill-opacity=".3" transform="rotate(-22 45.6 80.7)"/><path d="M96 101C101 120 91 132.0 94 150" fill="none" stroke="#c3c2b7" stroke-opacity=".5" stroke-width=".9"/><ellipse cx="96" cy="74" rx="19" ry="24" fill="#f09978"/><path d="M93 102h6l-3-5z" fill="#f09978"/><ellipse cx="88.8" cy="63.9" rx="3.4" ry="6.2" fill="#fff" fill-opacity=".3" transform="rotate(-22 88.8 63.9)"/><path d="M178 111C173 130 183 137.0 176 150" fill="none" stroke="#c3c2b7" stroke-opacity=".5" stroke-width=".9"/><ellipse cx="178" cy="82" rx="21" ry="26" fill="#f0eee6"/><path d="M175 112h6l-3-5z" fill="#f0eee6"/><ellipse cx="170.0" cy="71.1" rx="3.8" ry="6.8" fill="#fff" fill-opacity=".3" transform="rotate(-22 170.0 71.1)"/><path d="M210 129C214 148 206 146.0 208 150" fill="none" stroke="#c3c2b7" stroke-opacity=".5" stroke-width=".9"/><ellipse cx="210" cy="106" rx="16" ry="20" fill="#55bf50"/><path d="M207 130h6l-3-5z" fill="#55bf50"/><ellipse cx="203.9" cy="97.6" rx="2.9" ry="5.2" fill="#fff" fill-opacity=".3" transform="rotate(-22 203.9 97.6)"/><path d="M140 83C136 102 144 123.0 138 150" fill="none" stroke="#c3c2b7" stroke-opacity=".5" stroke-width=".9"/><ellipse cx="140" cy="62" rx="14" ry="18" fill="#6da7ec"/><path d="M137 84h6l-3-5z" fill="#6da7ec"/><ellipse cx="134.7" cy="54.4" rx="2.5" ry="4.7" fill="#fff" fill-opacity=".3" transform="rotate(-22 134.7 54.4)"/><rect x="112" y="124" width="36" height="26" rx="2.5" fill="#6da7ec"/><rect x="127" y="124" width="6" height="26" fill="#f0eee6"/><rect x="112" y="133" width="36" height="5.5" fill="#f0eee6"/><ellipse cx="124.5" cy="121" rx="6" ry="3.8" fill="#f0eee6"/><ellipse cx="135.5" cy="121" rx="6" ry="3.8" fill="#f0eee6"/><rect x="26" y="140" width="5" height="2.4" rx=".7" fill="#f09978" transform="rotate(20 28.5 141.2)"/><rect x="44" y="124" width="5" height="2.4" rx=".7" fill="#6da7ec" transform="rotate(-30 46.5 125.2)"/><rect x="76" y="146" width="5" height="2.4" rx=".7" fill="#f0eee6" transform="rotate(45 78.5 147.2)"/><rect x="166" y="140" width="5" height="2.4" rx=".7" fill="#55bf50" transform="rotate(-15 168.5 141.2)"/><rect x="196" y="130" width="5" height="2.4" rx=".7" fill="#f2cf86" transform="rotate(30 198.5 131.2)"/><rect x="152" y="112" width="5" height="2.4" rx=".7" fill="#f09978" transform="rotate(10 154.5 113.2)"/><rect x="16" y="112" width="5" height="2.4" rx=".7" fill="#6da7ec" transform="rotate(-40 18.5 113.2)"/><rect x="222" y="146" width="5" height="2.4" rx=".7" fill="#f0eee6" transform="rotate(60 224.5 147.2)"/><rect x="98" y="128" width="5" height="2.4" rx=".7" fill="#55bf50" transform="rotate(70 100.5 129.2)"/></svg></div><div class="k-visu-video"><svg class="cena-video" viewBox="0 0 270 480" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><rect width="270" height="480" fill="#2a201c"/><rect y="372" width="270" height="108" fill="#1b1513"/><path d="M-10 54Q135 128 280 46" fill="none" stroke="#5b4a3e" stroke-width="1.2"/><g class="lz lz1"><circle cx="6.1" cy="64.7" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="6.1" cy="64.7" r="3.4" fill="#f2cf86"/></g><g class="lz lz2"><circle cx="38.3" cy="77.3" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="38.3" cy="77.3" r="3.4" fill="#f2cf86"/></g><g class="lz lz3"><circle cx="70.6" cy="86.1" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="70.6" cy="86.1" r="3.4" fill="#f2cf86"/></g><g class="lz lz1"><circle cx="102.8" cy="91.0" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="102.8" cy="91.0" r="3.4" fill="#f2cf86"/></g><g class="lz lz2"><circle cx="135.0" cy="92.0" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="135.0" cy="92.0" r="3.4" fill="#f2cf86"/></g><g class="lz lz3"><circle cx="167.2" cy="89.2" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="167.2" cy="89.2" r="3.4" fill="#f2cf86"/></g><g class="lz lz1"><circle cx="199.4" cy="82.5" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="199.4" cy="82.5" r="3.4" fill="#f2cf86"/></g><g class="lz lz2"><circle cx="231.7" cy="72.0" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="231.7" cy="72.0" r="3.4" fill="#f2cf86"/></g><g class="lz lz3"><circle cx="263.9" cy="57.6" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="263.9" cy="57.6" r="3.4" fill="#f2cf86"/></g><path d="M-10 118Q135 186 280 110" fill="none" stroke="#5b4a3e" stroke-width="1.2"/><g class="lz lz2"><circle cx="8.1" cy="128.9" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="8.1" cy="128.9" r="3.4" fill="#f2cf86"/></g><g class="lz lz3"><circle cx="44.4" cy="141.4" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="44.4" cy="141.4" r="3.4" fill="#f2cf86"/></g><g class="lz lz1"><circle cx="80.6" cy="149.4" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="80.6" cy="149.4" r="3.4" fill="#f2cf86"/></g><g class="lz lz2"><circle cx="116.9" cy="152.9" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="116.9" cy="152.9" r="3.4" fill="#f2cf86"/></g><g class="lz lz3"><circle cx="153.1" cy="151.9" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="153.1" cy="151.9" r="3.4" fill="#f2cf86"/></g><g class="lz lz1"><circle cx="189.4" cy="146.4" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="189.4" cy="146.4" r="3.4" fill="#f2cf86"/></g><g class="lz lz2"><circle cx="225.6" cy="136.4" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="225.6" cy="136.4" r="3.4" fill="#f2cf86"/></g><g class="lz lz3"><circle cx="261.9" cy="121.9" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="261.9" cy="121.9" r="3.4" fill="#f2cf86"/></g><path d="M40 265C34 284 46 291.0 38 304" fill="none" stroke="#c3c2b7" stroke-opacity=".5" stroke-width=".9"/><ellipse cx="40" cy="236" rx="21" ry="26" fill="#2a78d6"/><path d="M37 266h6l-3-5z" fill="#2a78d6"/><ellipse cx="32.0" cy="225.1" rx="3.8" ry="6.8" fill="#fff" fill-opacity=".3" transform="rotate(-22 32.0 225.1)"/><path d="M70 238C75 257 65 277.5 68 304" fill="none" stroke="#c3c2b7" stroke-opacity=".5" stroke-width=".9"/><ellipse cx="70" cy="212" rx="18" ry="23" fill="#f09978"/><path d="M67 239h6l-3-5z" fill="#f09978"/><ellipse cx="63.2" cy="202.3" rx="3.2" ry="6.0" fill="#fff" fill-opacity=".3" transform="rotate(-22 63.2 202.3)"/><path d="M228 255C223 274 233 286.0 226 304" fill="none" stroke="#c3c2b7" stroke-opacity=".5" stroke-width=".9"/><ellipse cx="228" cy="226" rx="21" ry="26" fill="#f0eee6"/><path d="M225 256h6l-3-5z" fill="#f0eee6"/><ellipse cx="220.0" cy="215.1" rx="3.8" ry="6.8" fill="#fff" fill-opacity=".3" transform="rotate(-22 220.0 215.1)"/><path d="M202 275C206 294 198 296.0 200 304" fill="none" stroke="#c3c2b7" stroke-opacity=".5" stroke-width=".9"/><ellipse cx="202" cy="252" rx="16" ry="20" fill="#55bf50"/><path d="M199 276h6l-3-5z" fill="#55bf50"/><ellipse cx="195.9" cy="243.6" rx="2.9" ry="5.2" fill="#fff" fill-opacity=".3" transform="rotate(-22 195.9 243.6)"/><rect x="22" y="300" width="226" height="10" rx="2" fill="#f0eee6"/><rect x="28" y="310" width="214" height="54" fill="#e2ded4"/><path d="M28 330h214M28 350h214" stroke="#d3cec2" stroke-width="1"/><rect x="100" y="258" width="70" height="42" rx="4" fill="#f0eee6"/><rect x="100" y="282" width="70" height="5" fill="#6da7ec"/><rect x="114" y="226" width="42" height="32" rx="4" fill="#f8f6f0"/><rect x="114" y="246" width="42" height="4" fill="#6da7ec"/><text x="135" y="220" text-anchor="middle" class="velas">60</text><g class="chama"><ellipse cx="126" cy="190" rx="2.6" ry="4.4" fill="#f2cf86"/><ellipse cx="145" cy="190" rx="2.6" ry="4.4" fill="#f2cf86"/></g><ellipse cx="56" cy="298" rx="14" ry="3" fill="#c3c2b7" fill-opacity=".55"/><ellipse cx="214" cy="298" rx="14" ry="3" fill="#c3c2b7" fill-opacity=".55"/><rect x="76" y="280" width="6" height="18" rx="1.5" fill="#c3c2b7" fill-opacity=".35"/><rect x="188" y="280" width="6" height="18" rx="1.5" fill="#c3c2b7" fill-opacity=".35"/><path d="M8 480V420a26 26 0 0 1 52 0V480z" fill="#120e0d"/><path d="M74 480V420a26 26 0 0 1 52 0V480z" fill="#120e0d"/><path d="M144 480V420a26 26 0 0 1 52 0V480z" fill="#120e0d"/><path d="M210 480V420a26 26 0 0 1 52 0V480z" fill="#120e0d"/><rect x="40" y="380" width="5" height="2.4" rx=".7" fill="#f09978" transform="rotate(20 42.5 381.2)"/><rect x="90" y="396" width="5" height="2.4" rx=".7" fill="#6da7ec" transform="rotate(-30 92.5 397.2)"/><rect x="150" y="388" width="5" height="2.4" rx=".7" fill="#f0eee6" transform="rotate(45 152.5 389.2)"/><rect x="210" y="402" width="5" height="2.4" rx=".7" fill="#55bf50" transform="rotate(-15 212.5 403.2)"/><rect x="120" y="410" width="5" height="2.4" rx=".7" fill="#f2cf86" transform="rotate(30 122.5 411.2)"/><rect x="60" y="420" width="5" height="2.4" rx=".7" fill="#f09978" transform="rotate(70 62.5 421.2)"/><rect x="230" y="384" width="5" height="2.4" rx=".7" fill="#6da7ec" transform="rotate(10 232.5 385.2)"/></svg></div><span class="k-visu-x"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></span><div class="k-visu-b"><i data-barra></i></div></div>
 
-<section class="fecho" aria-labelledby="idade">
-  <div class="miolo fecho-grade">
-    <p class="fecho-numero" aria-hidden="true">18+</p>
-    <div class="fecho-texto">
-      <h2 id="idade" class="titulo-grande">Só para maiores de 18 anos</h2>
-      <p>Você pode bloquear e denunciar qualquer pessoa. As denúncias vão para a nossa moderação, que pode advertir, suspender ou encerrar contas. Conheça as regras em <a href="termos.html">Termos de uso</a> e <a href="seguranca-infantil.html">Segurança infantil</a>.</p>
-      <h2 class="fecho-estado">O Contatinho está em teste</h2>
-      <p>Ele ainda não está na Google Play nem na App Store, então não há o que baixar por aqui. Quando estiver disponível, os links aparecem nesta página.</p>
-    </div>
-  </div>
-</section>
+<div class="k-folha" data-acoes><div><span class="k-f-quem"><span class="k-av k-av--p k-av--d"><svg viewBox="0 0 24 24"><circle cx="16.6" cy="12" r="2.6"/><circle cx="14.3" cy="15.98" r="2.6"/><circle cx="9.7" cy="15.98" r="2.6"/><circle cx="7.4" cy="12" r="2.6"/><circle cx="9.7" cy="8.02" r="2.6"/><circle cx="14.3" cy="8.02" r="2.6"/><circle class="a" cx="12" cy="12" r="2.2"/></svg></span><b>Jhullye</b></span><span class="k-op" data-esconder><svg viewBox="0 0 24 24"><path d="M3 5h18v4H3zM5 9v10h14V9M10 13h4"/></svg><span>Esconder<small>Sai da lista e fica no Arquivo</small></span></span><span class="k-op"><svg viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 9.5-4.9M18 11v5l1.5 2H8M10 20.5a2.2 2.2 0 0 0 4 0M4 4l16 16"/></svg><span>Silenciar avisos</span></span><span class="k-op"><svg viewBox="0 0 24 24"><path d="M4.5 7h15M9.5 7V4.5h5V7M6.5 7l1 13h9l1-13"/></svg><span>Apagar conversa</span></span><span class="k-op p"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M6.5 6.5l11 11"/></svg><span>Bloquear</span></span></div></div>
+<div class="k-folha" data-folha><div><span class="k-s-selo k-s-selo--p"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z"/><rect x="9" y="11" width="6" height="5" rx="1"/><path d="M10.2 11V9.6a1.8 1.8 0 0 1 3.6 0V11"/></svg></span><b>Esconder a conversa com Jhullye?</b><p>Ela sai da lista e só aparece no Arquivo, com a sua senha.</p><span class="k-bt" data-confirma>Esconder</span><span class="k-bt k-bt--s">Cancelar</span></div></div>
 
+<div class="k-senha" data-senha><div class="k-s-topo"><span class="k-s-selo"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z"/><rect x="9" y="11" width="6" height="5" rx="1"/><path d="M10.2 11V9.6a1.8 1.8 0 0 1 3.6 0V11"/></svg></span><b>Arquivo</b><small>Digite sua senha</small><span class="k-pontos" data-pontos><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="k-desb"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Desbloqueado</span></div><span class="k-tec"><i data-s="1">1</i><i data-s="2">2</i><i data-s="3">3</i><i data-s="4">4</i><i data-s="5">5</i><i data-s="6">6</i><i data-s="7">7</i><i data-s="8">8</i><i data-s="9">9</i><i class="v"></i><i data-s="0">0</i><i class="v"><svg viewBox="0 0 24 24"><path d="M9 5.5h11v13H9l-6-6.5zM12.5 9.5l5 5M17.5 9.5l-5 5"/></svg></i></span><span class="k-bt" data-abrir>Abrir</span></div>
+
+<div class="k-aviso" data-aviso>Conversa escondida</div>
+<div class="k-topo-t" data-topo></div>
+<div class="k-dedo" data-dedo></div>
+</div></div></div>
+</div>
+</div>
+
+<section class="m1-sec m1-passos" aria-labelledby="m1-passos-t"><h2 id="m1-passos-t">Abre com uma conta que só você sabe.</h2>
+<ol><li><i>1</i><b>Escolha sua conta secreta</b><p>Dois números. Só essa conta abre o chat.</p></li><li><i>2</i><b>Passe o seu código</b><p>Sem telefone e sem <span class="nq">e-mail</span>.</p></li><li><i>3</i><b>Converse</b><p>Texto, foto, vídeo e áudio, cifrados no seu celular.</p></li></ol></section>
+
+<section class="m1-sec m1-igual" aria-labelledby="m1-igual-t"><h2 id="m1-igual-t">Faça as contas.</h2>
+<dl>
+<div><dt>Alguém abre o app no seu celular</dt><dd>Vê só uma calculadora.</dd></div>
+<div><dt>Chega uma mensagem</dt><dd>O aviso diz só “Novo cálculo disponível”. Sem nome, sem a mensagem.</dd></div>
+<div><dt>Alguém obriga você a abrir</dt><dd>A senha de mentira mostra o Arquivo vazio.</dd></div>
+<div><dt>Alguém copia os arquivos do celular</dt><dd>Está tudo cifrado, com a chave presa no aparelho.</dd></div>
+<div><dt>Servidor invadido ou ordem judicial</dt><dd>Nós não temos o conteúdo das conversas.</dd></div>
+<div><dt>Alguém tenta um print no Android</dt><dd>A tela sai preta. No iPhone, o sistema não deixa bloquear.</dd></div>
+</dl><p class="m1-nota"><a href="privacidade.html#limites">O que o app não protege</a></p></section>
+
+<section class="m1-sec m1-decide" aria-labelledby="m1-decide-t"><div><h2 id="m1-decide-t">Só fala com você quem tem o seu código.</h2><p>Você começa Offline. O primeiro contato chega separado, só com texto. O Online é opcional e exige idade confirmada.</p></div>
+<div class="m1-ped" aria-hidden="true"><span class="m1-ped-t">Desconhecidos</span><div class="m1-ped-c"><span class="m1-av">J</span><div><b>Juca</b><small>@juca · pediu para conversar</small></div></div><p>Oi, aqui é o Juca, do futebol. O Pietro me passou o seu código.</p><div class="m1-ped-b"><span class="w">Aceitar</span><span>Apagar</span><span>Bloquear</span><span>Denunciar</span></div></div></section>
+
+<section class="m1-sec m1-arq" aria-labelledby="m1-arq-t"><h2 id="m1-arq-t">Duas senhas. Um Arquivo.</h2><p class="m1-arq-p">A conversa escondida sai da lista. A senha de mentira abre o mesmo Arquivo, vazio.</p>
+<div class="m1-arq-g"><figure><figcaption>Senha verdadeira</figcaption><ul><li><span>J</span><b>Jhullye</b>Fechado. Sábado, 19h.</li><li><span>A</span><b>Alexa</b>Foto</li></ul></figure><figure><figcaption>Senha de mentira</figcaption><p>Nenhuma conversa arquivada</p></figure></div>
+<small>Esconder conversas faz parte do Plano anual. Ninguém recupera a senha verdadeira, nem nós.</small></section>
+
+<section class="m1-fim" id="baixar-1" aria-labelledby="m1-fim-t"><div class="m1-fim-logo"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path fill="currentColor" d="M27 26h46a9 9 0 0 1 0 18H27a9 9 0 0 1 0-18Zm0 23h46a9 9 0 0 1 0 18H42.5L31 77c-1.900 1.700-3.500.800-3.500-1.500V67H27a9 9 0 0 1 0-18Z"/></svg></div><h2 id="m1-fim-t">Seu celular, suas conversas.</h2><p>Só para maiores de 18 anos. Bloqueie e denuncie qualquer pessoa: a moderação pode advertir, suspender ou encerrar contas.</p><div class="m1-lojas"><a href="https://apps.apple.com/br/app/id6829813231">Baixar na App Store</a><a href="https://play.google.com/store/apps/details?id=com.vexmenu.calculadora">Baixar no Google Play</a></div></section>
 </main>
-<footer class="rodape">
-<div class="miolo">
-<a class="marca" href="index.html" aria-label="Contatinho, início"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path fill="currentColor" d="M27 26h46a9 9 0 0 1 0 18H27a9 9 0 0 1 0-18Zm0 23h46a9 9 0 0 1 0 18H42.5L31 77c-1.900 1.700-3.500.800-3.500-1.500V67H27a9 9 0 0 1 0-18Z"/></svg><span>Contatinho</span></a>
-<ul>
-<li><a href="index.html">Início</a></li>
-<li><a href="privacidade.html">Privacidade</a></li>
-<li><a href="termos.html">Termos</a></li>
-<li><a href="excluir-conta.html">Excluir conta</a></li>
-<li><a href="seguranca-infantil.html">Segurança infantil</a></li>
-<li><a href="suporte.html">Suporte</a></li>
-</ul>
-<p>Responsável: VEXMENU LTDA, CNPJ 63.913.759/0001-85. Contato: <a href="mailto:dev@vexcode.com.br">dev@vexcode.com.br</a></p>
-<p>Versão de 2 de novembro de 2026. Este site não usa cookies nem rastreadores.</p>
+</div>
+
+<div class="v5">
+<a class="pular" href="#c5">Pular para o conteúdo</a>
+<header class="m5-nav"><a class="m5-marca" href="#topo" aria-label="Contatinho, início"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path fill="currentColor" d="M27 26h46a9 9 0 0 1 0 18H27a9 9 0 0 1 0-18Zm0 23h46a9 9 0 0 1 0 18H42.5L31 77c-1.900 1.700-3.500.800-3.500-1.500V67H27a9 9 0 0 1 0-18Z"/></svg><span>Contatinho</span></a><a class="m5-b" href="#baixar-5">Baixar</a></header>
+<main id="c5">
+<div class="m5-her">
+<h1>Seu celular passa de mão em mão. <br>Suas conversas, não.</h1>
+<div class="m5-palco">
+<figure class="m5-fora"><div class="k" data-celular="calc" role="img" aria-label="O mesmo celular nas mãos de outra pessoa: só uma calculadora, fazendo contas comuns.">
+<div class="k-corpo" aria-hidden="true"><div class="k-tela" data-tela>
+<div class="k-ilha"></div>
+<div class="k-status"><span>19:42</span><span class="k-st"><svg viewBox="0 0 18 12"><path d="M1 8.5h2V11H1zM5.5 6h2v5h-2zM10 3.5h2V11h-2zM14.5 1h2v10h-2z"/></svg><svg viewBox="0 0 24 12"><rect x=".5" y=".5" width="20" height="11" rx="3" fill="none" stroke="currentColor"/><rect x="2" y="2" width="15" height="8" rx="1.5"/></svg></span></div>
+<section class="k-c k-calc on" data-t="calc">
+<div class="k-visor"><span class="k-expr" data-expr>12 × 3,5</span><span class="k-num" data-num>42</span></div>
+<div class="k-teclas">
+<i class="f" data-k="AC">AC</i><i class="f" data-k="⌫"><svg viewBox="0 0 24 24"><path d="M9 5.5h11v13H9l-6-6.5zM12.5 9.5l5 5M17.5 9.5l-5 5"/></svg></i><i class="f" data-k="%">%</i><i class="o" data-k="÷">÷</i>
+<i data-k="7">7</i><i data-k="8">8</i><i data-k="9">9</i><i class="o" data-k="×">×</i>
+<i data-k="4">4</i><i data-k="5">5</i><i data-k="6">6</i><i class="o" data-k="−">−</i>
+<i data-k="1">1</i><i data-k="2">2</i><i data-k="3">3</i><i class="o" data-k="+">+</i>
+<i data-k="±">±</i><i data-k="0">0</i><i data-k=",">,</i><i class="ig" data-k="=">=</i>
+</div>
+</section>
+<div class="k-dedo" data-dedo></div>
+</div></div></div>
+<figcaption>Os outros veem</figcaption></figure>
+<figure class="m5-dentro"><div class="k" data-celular="filme" role="img" aria-label="Celular mostrando o Contatinho: chega um aviso que não diz de quem é nem o que diz; a calculadora abre a lista de conversas com a conta secreta; a Jhullye manda a foto da decoração e o vídeo do salão, que chegam cobertos e só aparecem quando você toca; você segura a conversa e esconde: ela vai para o Arquivo, que só abre com senha; dois toques no topo voltam para a calculadora.">
+<div class="k-corpo" aria-hidden="true"><div class="k-tela" data-tela>
+<div class="k-ilha"></div>
+<div class="k-push" data-push><span class="k-push-ic"><svg viewBox="0 0 24 24"><path d="M7 6.5v5M4.5 9h5M14.5 9h5M5 15.5l4 4M9 15.5l-4 4M14.5 16h5M14.5 19h5"/></svg></span><div><b>Calculadora</b><span>Novo cálculo disponível</span></div><time>agora</time></div>
+<div class="k-status"><span>19:42</span><span class="k-st"><svg viewBox="0 0 18 12"><path d="M1 8.5h2V11H1zM5.5 6h2v5h-2zM10 3.5h2V11h-2zM14.5 1h2v10h-2z"/></svg><svg viewBox="0 0 24 12"><rect x=".5" y=".5" width="20" height="11" rx="3" fill="none" stroke="currentColor"/><rect x="2" y="2" width="15" height="8" rx="1.5"/></svg></span></div>
+
+<section class="k-c k-calc" data-t="calc">
+<div class="k-visor"><span class="k-expr" data-expr>&nbsp;</span><span class="k-num" data-num>0</span></div>
+<div class="k-teclas">
+<i class="f" data-k="AC">AC</i><i class="f" data-k="⌫"><svg viewBox="0 0 24 24"><path d="M9 5.5h11v13H9l-6-6.5zM12.5 9.5l5 5M17.5 9.5l-5 5"/></svg></i><i class="f" data-k="%">%</i><i class="o" data-k="÷">÷</i>
+<i data-k="7">7</i><i data-k="8">8</i><i data-k="9">9</i><i class="o" data-k="×">×</i>
+<i data-k="4">4</i><i data-k="5">5</i><i data-k="6">6</i><i class="o" data-k="−">−</i>
+<i data-k="1">1</i><i data-k="2">2</i><i data-k="3">3</i><i class="o" data-k="+">+</i>
+<i data-k="±">±</i><i data-k="0">0</i><i data-k=",">,</i><i class="ig" data-k="=">=</i>
+</div>
+</section>
+
+<section class="k-c k-lista" data-t="lista">
+<header class="k-l-topo"><h6>Conversas</h6><span class="k-selo">Offline</span></header>
+<div class="k-linhas">
+<div class="k-linha" data-jhu><span class="k-av k-av--d"><svg viewBox="0 0 24 24"><circle cx="16.6" cy="12" r="2.6"/><circle cx="14.3" cy="15.98" r="2.6"/><circle cx="9.7" cy="15.98" r="2.6"/><circle cx="7.4" cy="12" r="2.6"/><circle cx="9.7" cy="8.02" r="2.6"/><circle cx="14.3" cy="8.02" r="2.6"/><circle class="a" cx="12" cy="12" r="2.2"/></svg></span><div class="k-l-t"><b>Jhullye</b><span data-jhu-prev>A surpresa ainda tá de pé?</span></div><div class="k-l-m"><time data-jhu-hora>19:40</time><em data-naolidas>1</em></div></div>
+<div class="k-linha"><span class="k-av k-av--d"><svg viewBox="0 0 24 24"><path class="a" d="M3 9.5c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M3 14.5c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg></span><div class="k-l-t"><b>Celo</b><span>Mandei o orçamento</span></div><div class="k-l-m"><time>18:10</time></div></div>
+<div class="k-linha"><span class="k-av k-av--l">A</span><div class="k-l-t"><b>Alexa</b><span>Foto</span></div><div class="k-l-m"><time>17:03</time></div></div>
+<div class="k-linha"><span class="k-av k-av--d"><svg viewBox="0 0 24 24"><path d="M5 19C5 11 10 5 19 5c0 9-6 14-14 14z"/><path class="a" d="M5 19l9-9"/></svg></span><div class="k-l-t"><b>Pietro</b><span>Áudio de 0:14</span></div><div class="k-l-m"><time>Ontem</time></div></div>
+<div class="k-linha"><span class="k-av k-av--d"><svg viewBox="0 0 24 24"><path d="M5 10V4.5l4 3h6l4-3V10a7 7 0 0 1-14 0z"/><path class="a" d="M9.5 12h.01M14.5 12h.01"/></svg></span><div class="k-l-t"><b>Juca</b><span>Valeu!</span></div><div class="k-l-m"><time>Ontem</time></div></div>
+<div class="k-linha"><span class="k-av k-av--l">M</span><div class="k-l-t"><b>Mara</b><span>Combinado</span></div><div class="k-l-m"><time>Seg</time></div></div>
+<div class="k-linha k-linha--arq" data-arq-linha><span class="k-av k-av--i"><svg viewBox="0 0 24 24"><path d="M3 5h18v4H3zM5 9v10h14V9M10 13h4"/></svg></span><div class="k-l-t"><b>Arquivo</b></div></div>
+</div>
+<nav class="k-abas"><span class="on"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>Conversas</span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Desconhecidos</span><span><svg viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></svg>Ajustes</span></nav>
+</section>
+
+<section class="k-c k-conv on" data-t="conv">
+<header class="k-c-topo"><svg class="k-volta" data-volta viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg><span class="k-av k-av--p k-av--d"><svg viewBox="0 0 24 24"><circle cx="16.6" cy="12" r="2.6"/><circle cx="14.3" cy="15.98" r="2.6"/><circle cx="9.7" cy="15.98" r="2.6"/><circle cx="7.4" cy="12" r="2.6"/><circle cx="9.7" cy="8.02" r="2.6"/><circle cx="14.3" cy="8.02" r="2.6"/><circle class="a" cx="12" cy="12" r="2.2"/></svg></span><div class="k-c-n"><b>Jhullye</b><small data-sub>online agora</small></div><svg class="k-ppp" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="19" cy="12" r="1.2"/></svg></header>
+<div class="k-msgs">
+<p class="k-cif"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Mensagens cifradas de ponta a ponta. Só vocês dois conseguem ler.</p>
+<span class="k-dia">Hoje</span>
+<div class="k-m ela">Os 60 da Mara são sábado. Ela não pode nem sonhar<time>11:02</time></div>
+<div class="k-m eu">Pode deixar. Ela vive mexendo no meu celular<time>11:05</time></div>
+<div class="k-m ela">Por isso combinei tudo por aqui<time>11:06</time></div>
+<div class="k-m eu">O salão tá reservado<time>11:07</time></div>
+<div class="k-m ela">E o presente tá guardado aqui em casa<time>11:09</time></div>
+<div class="k-m ela" data-m="1">A surpresa ainda tá de pé?<time>19:40</time></div>
+<div class="k-m eu" data-m="2">Tá sim. Ninguém desconfia.<time>19:41</time></div>
+<figure class="k-m ela k-m--foto" data-m="3"><div class="k-quadro" data-foto><svg viewBox="0 0 24 24"><path d="M4 8.5h3l1.6-2.5h6.8L17 8.5h3V19H4z"/><circle cx="12" cy="13.5" r="3.3"/></svg><b>Foto</b><small>Toque para abrir</small></div><figcaption>A decoração<time>19:41</time></figcaption></figure>
+<div class="k-m eu k-m--audio" data-m="4"><span class="k-pl" data-play><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="k-onda"><svg viewBox="0 0 112 24"><path d="M1.5 4.0V20.0M6.0 5.0V19.0M10.5 6.0V18.0M14.9 9.0V15.0M19.4 7.0V17.0M23.9 7.0V17.0M28.4 4.0V20.0M32.9 9.0V15.0M37.3 3.0V21.0M41.8 9.0V15.0M46.3 7.0V17.0M50.8 6.0V18.0M55.3 6.0V18.0M59.7 7.0V17.0M64.2 3.0V21.0M68.7 7.0V17.0M73.2 6.0V18.0M77.7 9.0V15.0M82.1 7.0V17.0M86.6 3.0V21.0M91.1 9.0V15.0M95.6 6.0V18.0M100.1 9.0V15.0M104.5 3.0V21.0M109.0 9.0V15.0"/></svg><span class="k-onda-p" data-onda><svg viewBox="0 0 112 24"><path d="M1.5 4.0V20.0M6.0 5.0V19.0M10.5 6.0V18.0M14.9 9.0V15.0M19.4 7.0V17.0M23.9 7.0V17.0M28.4 4.0V20.0M32.9 9.0V15.0M37.3 3.0V21.0M41.8 9.0V15.0M46.3 7.0V17.0M50.8 6.0V18.0M55.3 6.0V18.0M59.7 7.0V17.0M64.2 3.0V21.0M68.7 7.0V17.0M73.2 6.0V18.0M77.7 9.0V15.0M82.1 7.0V17.0M86.6 3.0V21.0M91.1 9.0V15.0M95.6 6.0V18.0M100.1 9.0V15.0M104.5 3.0V21.0M109.0 9.0V15.0"/></svg></span></span><time>0:04</time></div>
+<figure class="k-m ela k-m--video" data-m="5"><div class="k-quadro" data-video><span class="k-pl"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span><b>Vídeo · 0:12</b><small>Toque para abrir</small></div><time>19:42</time></figure>
+<div class="k-m ela" data-m="6">Fechado. Sábado, 19h.<time>19:42</time></div>
+</div>
+<footer class="k-comp"><svg viewBox="0 0 24 24"><path d="M4 8.5h3l1.6-2.5h6.8L17 8.5h3V19H4z"/><circle cx="12" cy="13.5" r="3.3"/></svg><div class="k-campo" data-campo><span data-texto>Mensagem</span></div><span class="k-env" data-env><svg class="k-i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg><svg class="k-i-env" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></footer>
+</section>
+
+<section class="k-c k-arq" data-t="arq">
+<header class="k-l-topo k-arq-topo"><svg class="k-volta" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg><h6>Arquivo</h6></header>
+<div class="k-linhas">
+<div class="k-linha"><span class="k-av k-av--d"><svg viewBox="0 0 24 24"><circle cx="16.6" cy="12" r="2.6"/><circle cx="14.3" cy="15.98" r="2.6"/><circle cx="9.7" cy="15.98" r="2.6"/><circle cx="7.4" cy="12" r="2.6"/><circle cx="9.7" cy="8.02" r="2.6"/><circle cx="14.3" cy="8.02" r="2.6"/><circle class="a" cx="12" cy="12" r="2.2"/></svg></span><div class="k-l-t"><b>Jhullye</b><span>Fechado. Sábado, 19h.</span></div><div class="k-l-m"><time>19:42</time></div></div>
+</div>
+</section>
+
+<div class="k-visu" data-visu><div class="k-visu-foto"><svg class="cena-foto" viewBox="0 0 240 190" aria-hidden="true" focusable="false"><rect width="240" height="190" fill="#1c2536"/><rect y="150" width="240" height="40" fill="#241f1d"/><rect y="150" width="240" height="1.5" fill="#3a302a"/><path d="M-4 20Q120 50 244 18" fill="none" stroke="#c3c2b7" stroke-opacity=".55" stroke-width="1"/><path d="M-1.5 22.2h14l-7 12z" fill="#f09978"/><path d="M17.6 26.1h14l-7 12z" fill="#6da7ec"/><path d="M36.7 29.2h14l-7 12z" fill="#f0eee6"/><path d="M55.8 31.7h14l-7 12z" fill="#55bf50"/><path d="M74.8 33.3h14l-7 12z" fill="#f09978"/><path d="M93.9 34.3h14l-7 12z" fill="#6da7ec"/><path d="M113.0 34.5h14l-7 12z" fill="#f0eee6"/><path d="M132.1 34.0h14l-7 12z" fill="#55bf50"/><path d="M151.2 32.7h14l-7 12z" fill="#f09978"/><path d="M170.2 30.7h14l-7 12z" fill="#6da7ec"/><path d="M189.3 28.0h14l-7 12z" fill="#f0eee6"/><path d="M208.4 24.6h14l-7 12z" fill="#55bf50"/><path d="M227.5 20.4h14l-7 12z" fill="#f09978"/><path d="M54 122C48 141 60 142.5 52 150" fill="none" stroke="#c3c2b7" stroke-opacity=".5" stroke-width=".9"/><ellipse cx="54" cy="92" rx="22" ry="27" fill="#2a78d6"/><path d="M51 123h6l-3-5z" fill="#2a78d6"/><ellipse cx="45.6" cy="80.7" rx="4.0" ry="7.0" fill="#fff" fill-opacity=".3" transform="rotate(-22 45.6 80.7)"/><path d="M96 101C101 120 91 132.0 94 150" fill="none" stroke="#c3c2b7" stroke-opacity=".5" stroke-width=".9"/><ellipse cx="96" cy="74" rx="19" ry="24" fill="#f09978"/><path d="M93 102h6l-3-5z" fill="#f09978"/><ellipse cx="88.8" cy="63.9" rx="3.4" ry="6.2" fill="#fff" fill-opacity=".3" transform="rotate(-22 88.8 63.9)"/><path d="M178 111C173 130 183 137.0 176 150" fill="none" stroke="#c3c2b7" stroke-opacity=".5" stroke-width=".9"/><ellipse cx="178" cy="82" rx="21" ry="26" fill="#f0eee6"/><path d="M175 112h6l-3-5z" fill="#f0eee6"/><ellipse cx="170.0" cy="71.1" rx="3.8" ry="6.8" fill="#fff" fill-opacity=".3" transform="rotate(-22 170.0 71.1)"/><path d="M210 129C214 148 206 146.0 208 150" fill="none" stroke="#c3c2b7" stroke-opacity=".5" stroke-width=".9"/><ellipse cx="210" cy="106" rx="16" ry="20" fill="#55bf50"/><path d="M207 130h6l-3-5z" fill="#55bf50"/><ellipse cx="203.9" cy="97.6" rx="2.9" ry="5.2" fill="#fff" fill-opacity=".3" transform="rotate(-22 203.9 97.6)"/><path d="M140 83C136 102 144 123.0 138 150" fill="none" stroke="#c3c2b7" stroke-opacity=".5" stroke-width=".9"/><ellipse cx="140" cy="62" rx="14" ry="18" fill="#6da7ec"/><path d="M137 84h6l-3-5z" fill="#6da7ec"/><ellipse cx="134.7" cy="54.4" rx="2.5" ry="4.7" fill="#fff" fill-opacity=".3" transform="rotate(-22 134.7 54.4)"/><rect x="112" y="124" width="36" height="26" rx="2.5" fill="#6da7ec"/><rect x="127" y="124" width="6" height="26" fill="#f0eee6"/><rect x="112" y="133" width="36" height="5.5" fill="#f0eee6"/><ellipse cx="124.5" cy="121" rx="6" ry="3.8" fill="#f0eee6"/><ellipse cx="135.5" cy="121" rx="6" ry="3.8" fill="#f0eee6"/><rect x="26" y="140" width="5" height="2.4" rx=".7" fill="#f09978" transform="rotate(20 28.5 141.2)"/><rect x="44" y="124" width="5" height="2.4" rx=".7" fill="#6da7ec" transform="rotate(-30 46.5 125.2)"/><rect x="76" y="146" width="5" height="2.4" rx=".7" fill="#f0eee6" transform="rotate(45 78.5 147.2)"/><rect x="166" y="140" width="5" height="2.4" rx=".7" fill="#55bf50" transform="rotate(-15 168.5 141.2)"/><rect x="196" y="130" width="5" height="2.4" rx=".7" fill="#f2cf86" transform="rotate(30 198.5 131.2)"/><rect x="152" y="112" width="5" height="2.4" rx=".7" fill="#f09978" transform="rotate(10 154.5 113.2)"/><rect x="16" y="112" width="5" height="2.4" rx=".7" fill="#6da7ec" transform="rotate(-40 18.5 113.2)"/><rect x="222" y="146" width="5" height="2.4" rx=".7" fill="#f0eee6" transform="rotate(60 224.5 147.2)"/><rect x="98" y="128" width="5" height="2.4" rx=".7" fill="#55bf50" transform="rotate(70 100.5 129.2)"/></svg></div><div class="k-visu-video"><svg class="cena-video" viewBox="0 0 270 480" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><rect width="270" height="480" fill="#2a201c"/><rect y="372" width="270" height="108" fill="#1b1513"/><path d="M-10 54Q135 128 280 46" fill="none" stroke="#5b4a3e" stroke-width="1.2"/><g class="lz lz1"><circle cx="6.1" cy="64.7" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="6.1" cy="64.7" r="3.4" fill="#f2cf86"/></g><g class="lz lz2"><circle cx="38.3" cy="77.3" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="38.3" cy="77.3" r="3.4" fill="#f2cf86"/></g><g class="lz lz3"><circle cx="70.6" cy="86.1" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="70.6" cy="86.1" r="3.4" fill="#f2cf86"/></g><g class="lz lz1"><circle cx="102.8" cy="91.0" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="102.8" cy="91.0" r="3.4" fill="#f2cf86"/></g><g class="lz lz2"><circle cx="135.0" cy="92.0" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="135.0" cy="92.0" r="3.4" fill="#f2cf86"/></g><g class="lz lz3"><circle cx="167.2" cy="89.2" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="167.2" cy="89.2" r="3.4" fill="#f2cf86"/></g><g class="lz lz1"><circle cx="199.4" cy="82.5" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="199.4" cy="82.5" r="3.4" fill="#f2cf86"/></g><g class="lz lz2"><circle cx="231.7" cy="72.0" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="231.7" cy="72.0" r="3.4" fill="#f2cf86"/></g><g class="lz lz3"><circle cx="263.9" cy="57.6" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="263.9" cy="57.6" r="3.4" fill="#f2cf86"/></g><path d="M-10 118Q135 186 280 110" fill="none" stroke="#5b4a3e" stroke-width="1.2"/><g class="lz lz2"><circle cx="8.1" cy="128.9" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="8.1" cy="128.9" r="3.4" fill="#f2cf86"/></g><g class="lz lz3"><circle cx="44.4" cy="141.4" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="44.4" cy="141.4" r="3.4" fill="#f2cf86"/></g><g class="lz lz1"><circle cx="80.6" cy="149.4" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="80.6" cy="149.4" r="3.4" fill="#f2cf86"/></g><g class="lz lz2"><circle cx="116.9" cy="152.9" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="116.9" cy="152.9" r="3.4" fill="#f2cf86"/></g><g class="lz lz3"><circle cx="153.1" cy="151.9" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="153.1" cy="151.9" r="3.4" fill="#f2cf86"/></g><g class="lz lz1"><circle cx="189.4" cy="146.4" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="189.4" cy="146.4" r="3.4" fill="#f2cf86"/></g><g class="lz lz2"><circle cx="225.6" cy="136.4" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="225.6" cy="136.4" r="3.4" fill="#f2cf86"/></g><g class="lz lz3"><circle cx="261.9" cy="121.9" r="9" fill="#f2cf86" fill-opacity=".14"/><circle cx="261.9" cy="121.9" r="3.4" fill="#f2cf86"/></g><path d="M40 265C34 284 46 291.0 38 304" fill="none" stroke="#c3c2b7" stroke-opacity=".5" stroke-width=".9"/><ellipse cx="40" cy="236" rx="21" ry="26" fill="#2a78d6"/><path d="M37 266h6l-3-5z" fill="#2a78d6"/><ellipse cx="32.0" cy="225.1" rx="3.8" ry="6.8" fill="#fff" fill-opacity=".3" transform="rotate(-22 32.0 225.1)"/><path d="M70 238C75 257 65 277.5 68 304" fill="none" stroke="#c3c2b7" stroke-opacity=".5" stroke-width=".9"/><ellipse cx="70" cy="212" rx="18" ry="23" fill="#f09978"/><path d="M67 239h6l-3-5z" fill="#f09978"/><ellipse cx="63.2" cy="202.3" rx="3.2" ry="6.0" fill="#fff" fill-opacity=".3" transform="rotate(-22 63.2 202.3)"/><path d="M228 255C223 274 233 286.0 226 304" fill="none" stroke="#c3c2b7" stroke-opacity=".5" stroke-width=".9"/><ellipse cx="228" cy="226" rx="21" ry="26" fill="#f0eee6"/><path d="M225 256h6l-3-5z" fill="#f0eee6"/><ellipse cx="220.0" cy="215.1" rx="3.8" ry="6.8" fill="#fff" fill-opacity=".3" transform="rotate(-22 220.0 215.1)"/><path d="M202 275C206 294 198 296.0 200 304" fill="none" stroke="#c3c2b7" stroke-opacity=".5" stroke-width=".9"/><ellipse cx="202" cy="252" rx="16" ry="20" fill="#55bf50"/><path d="M199 276h6l-3-5z" fill="#55bf50"/><ellipse cx="195.9" cy="243.6" rx="2.9" ry="5.2" fill="#fff" fill-opacity=".3" transform="rotate(-22 195.9 243.6)"/><rect x="22" y="300" width="226" height="10" rx="2" fill="#f0eee6"/><rect x="28" y="310" width="214" height="54" fill="#e2ded4"/><path d="M28 330h214M28 350h214" stroke="#d3cec2" stroke-width="1"/><rect x="100" y="258" width="70" height="42" rx="4" fill="#f0eee6"/><rect x="100" y="282" width="70" height="5" fill="#6da7ec"/><rect x="114" y="226" width="42" height="32" rx="4" fill="#f8f6f0"/><rect x="114" y="246" width="42" height="4" fill="#6da7ec"/><text x="135" y="220" text-anchor="middle" class="velas">60</text><g class="chama"><ellipse cx="126" cy="190" rx="2.6" ry="4.4" fill="#f2cf86"/><ellipse cx="145" cy="190" rx="2.6" ry="4.4" fill="#f2cf86"/></g><ellipse cx="56" cy="298" rx="14" ry="3" fill="#c3c2b7" fill-opacity=".55"/><ellipse cx="214" cy="298" rx="14" ry="3" fill="#c3c2b7" fill-opacity=".55"/><rect x="76" y="280" width="6" height="18" rx="1.5" fill="#c3c2b7" fill-opacity=".35"/><rect x="188" y="280" width="6" height="18" rx="1.5" fill="#c3c2b7" fill-opacity=".35"/><path d="M8 480V420a26 26 0 0 1 52 0V480z" fill="#120e0d"/><path d="M74 480V420a26 26 0 0 1 52 0V480z" fill="#120e0d"/><path d="M144 480V420a26 26 0 0 1 52 0V480z" fill="#120e0d"/><path d="M210 480V420a26 26 0 0 1 52 0V480z" fill="#120e0d"/><rect x="40" y="380" width="5" height="2.4" rx=".7" fill="#f09978" transform="rotate(20 42.5 381.2)"/><rect x="90" y="396" width="5" height="2.4" rx=".7" fill="#6da7ec" transform="rotate(-30 92.5 397.2)"/><rect x="150" y="388" width="5" height="2.4" rx=".7" fill="#f0eee6" transform="rotate(45 152.5 389.2)"/><rect x="210" y="402" width="5" height="2.4" rx=".7" fill="#55bf50" transform="rotate(-15 212.5 403.2)"/><rect x="120" y="410" width="5" height="2.4" rx=".7" fill="#f2cf86" transform="rotate(30 122.5 411.2)"/><rect x="60" y="420" width="5" height="2.4" rx=".7" fill="#f09978" transform="rotate(70 62.5 421.2)"/><rect x="230" y="384" width="5" height="2.4" rx=".7" fill="#6da7ec" transform="rotate(10 232.5 385.2)"/></svg></div><span class="k-visu-x"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></span><div class="k-visu-b"><i data-barra></i></div></div>
+
+<div class="k-folha" data-acoes><div><span class="k-f-quem"><span class="k-av k-av--p k-av--d"><svg viewBox="0 0 24 24"><circle cx="16.6" cy="12" r="2.6"/><circle cx="14.3" cy="15.98" r="2.6"/><circle cx="9.7" cy="15.98" r="2.6"/><circle cx="7.4" cy="12" r="2.6"/><circle cx="9.7" cy="8.02" r="2.6"/><circle cx="14.3" cy="8.02" r="2.6"/><circle class="a" cx="12" cy="12" r="2.2"/></svg></span><b>Jhullye</b></span><span class="k-op" data-esconder><svg viewBox="0 0 24 24"><path d="M3 5h18v4H3zM5 9v10h14V9M10 13h4"/></svg><span>Esconder<small>Sai da lista e fica no Arquivo</small></span></span><span class="k-op"><svg viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 9.5-4.9M18 11v5l1.5 2H8M10 20.5a2.2 2.2 0 0 0 4 0M4 4l16 16"/></svg><span>Silenciar avisos</span></span><span class="k-op"><svg viewBox="0 0 24 24"><path d="M4.5 7h15M9.5 7V4.5h5V7M6.5 7l1 13h9l1-13"/></svg><span>Apagar conversa</span></span><span class="k-op p"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M6.5 6.5l11 11"/></svg><span>Bloquear</span></span></div></div>
+<div class="k-folha" data-folha><div><span class="k-s-selo k-s-selo--p"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z"/><rect x="9" y="11" width="6" height="5" rx="1"/><path d="M10.2 11V9.6a1.8 1.8 0 0 1 3.6 0V11"/></svg></span><b>Esconder a conversa com Jhullye?</b><p>Ela sai da lista e só aparece no Arquivo, com a sua senha.</p><span class="k-bt" data-confirma>Esconder</span><span class="k-bt k-bt--s">Cancelar</span></div></div>
+
+<div class="k-senha" data-senha><div class="k-s-topo"><span class="k-s-selo"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z"/><rect x="9" y="11" width="6" height="5" rx="1"/><path d="M10.2 11V9.6a1.8 1.8 0 0 1 3.6 0V11"/></svg></span><b>Arquivo</b><small>Digite sua senha</small><span class="k-pontos" data-pontos><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="k-desb"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Desbloqueado</span></div><span class="k-tec"><i data-s="1">1</i><i data-s="2">2</i><i data-s="3">3</i><i data-s="4">4</i><i data-s="5">5</i><i data-s="6">6</i><i data-s="7">7</i><i data-s="8">8</i><i data-s="9">9</i><i class="v"></i><i data-s="0">0</i><i class="v"><svg viewBox="0 0 24 24"><path d="M9 5.5h11v13H9l-6-6.5zM12.5 9.5l5 5M17.5 9.5l-5 5"/></svg></i></span><span class="k-bt" data-abrir>Abrir</span></div>
+
+<div class="k-aviso" data-aviso>Conversa escondida</div>
+<div class="k-topo-t" data-topo></div>
+<div class="k-dedo" data-dedo></div>
+</div></div></div>
+<figcaption>Você vê</figcaption></figure>
+</div>
+<p class="m5-sub">Mensagens cifradas de ponta a ponta, guardadas atrás de uma calculadora.</p>
+<div class="m5-lojas"><a href="https://apps.apple.com/br/app/id6829813231">Baixar na App Store</a><a href="https://play.google.com/store/apps/details?id=com.vexmenu.calculadora">Baixar no Google Play</a></div>
+</div>
+
+<section class="m5-lista" aria-labelledby="m5-lista-t"><h2 id="m5-lista-t">Tem coisa que é só sua.</h2>
+<ul><li>A surpresa <span class="seg" tabindex="0" role="img" aria-label="Foto de um presente, desfocada. Passe o mouse, toque e segure ou use o Tab para ver."><svg viewBox="0 0 128 82" aria-hidden="true" focusable="false"><rect width="128" height="82" fill="#2a78d6"/><rect y="64" width="128" height="18" fill="#1d5fb3"/><rect x="34" y="27" width="60" height="40" rx="3.5" fill="#f09978"/><rect x="59" y="27" width="10" height="40" fill="#f0eee6"/><rect x="34" y="41" width="60" height="8" fill="#f0eee6"/><ellipse cx="54" cy="22" rx="11" ry="6.5" fill="#f0eee6"/><ellipse cx="74" cy="22" rx="11" ry="6.5" fill="#f0eee6"/><circle cx="64" cy="24" r="3.6" fill="#e2ded4"/><rect x="12" y="18" width="5" height="2.4" rx=".7" fill="#f09978" transform="rotate(20 14.5 19.2)"/><rect x="22" y="48" width="5" height="2.4" rx=".7" fill="#6da7ec" transform="rotate(-30 24.5 49.2)"/><rect x="104" y="14" width="5" height="2.4" rx=".7" fill="#f0eee6" transform="rotate(45 106.5 15.2)"/><rect x="110" y="44" width="5" height="2.4" rx=".7" fill="#55bf50" transform="rotate(-15 112.5 45.2)"/><rect x="16" y="70" width="5" height="2.4" rx=".7" fill="#f2cf86" transform="rotate(30 18.5 71.2)"/><rect x="100" y="70" width="5" height="2.4" rx=".7" fill="#f09978" transform="rotate(70 102.5 71.2)"/><rect x="88" y="8" width="5" height="2.4" rx=".7" fill="#6da7ec" transform="rotate(-20 90.5 9.2)"/></svg><span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 12s3.5-6 9-6 9 6 9 6-3.5 6-9 6-9-6-9-6z"/><circle cx="12" cy="12" r="2.6"/><path d="M4 4l16 16"/></svg></span></span> da sua mãe.</li><li>A proposta de emprego.</li><li>O resultado do exame.</li><li>O orçamento do cliente.</li></ul></section>
+
+<section class="m5-azul" aria-labelledby="m5-azul-t"><div><h2 id="m5-azul-t">Sem telefone. Sem <span class="nq">e-mail</span>. Só um código.</h2><p>Você cria o seu código e passa para quem quiser. Só quem tem ele faz o primeiro contato, e só com texto.</p></div><div class="m5-cod" aria-hidden="true"><span>@jhullye</span><small>4 a 16 letras ou números</small></div></section>
+
+<section class="m5-tres" aria-labelledby="m5-tres-t"><h2 id="m5-tres-t">Como funciona</h2><ol><li><b>Escolha a sua conta</b><p>Dois números abrem o chat. O resto é calculadora.</p></li><li><b>Passe o seu código</b><p>Você começa Offline. O Online é opcional e exige idade confirmada.</p></li><li><b>Converse</b><p>Texto, foto, vídeo e áudio, cifrados de ponta a ponta.</p></li></ol></section>
+
+<section class="m5-cripto" aria-labelledby="m5-cripto-t"><div class="m5-cripto-c"><svg class="cena cena-cripto" viewBox="0 0 720 452" role="img" aria-label="A mensagem “Sábado, 19h. Ela não desconfia.” sai do seu celular cifrada, passa pelo servidor do Contatinho só como código embaralhado e volta a ser texto no celular da Jhullye. A chave fica só nos dois celulares."><path d="M216 277H318M402 277H504" stroke="#2a3f60" stroke-width="1.5" stroke-dasharray="4 6" fill="none"/><g class="cr-pac"><rect x="-40" y="-13" width="80" height="26" rx="13" fill="#13294a" stroke="#6da7ec" stroke-width="1.2"/><g transform="translate(-32 -7)" fill="none" stroke="#6da7ec" stroke-width="1.4" stroke-linecap="round"><rect x="1" y="5" width="9" height="7" rx="1.6" fill="#6da7ec" stroke="none"/><path d="M2.5 5V3.2a3 3 0 0 1 6 0V5"/></g><text x="-16" y="4.5" class="cr-cif">7Zr/kP0w</text></g><rect x="36" y="40" width="180" height="340" rx="32" fill="#0c0c0d" stroke="#2a3b57" stroke-width="1.5"/><rect x="44" y="48" width="164" height="324" rx="25" fill="#151515"/><rect x="104" y="56" width="44" height="13" rx="6.5" fill="#000"/><rect x="54" y="84" width="104" height="24" rx="8" fill="#0f2a4d"/><g transform="translate(62 90)" fill="none" stroke="#a9cbf3" stroke-width="1.4" stroke-linecap="round"><rect x="1" y="5" width="9" height="7" rx="1.6" fill="#a9cbf3" stroke="none"/><path d="M2.5 5V3.2a3 3 0 0 1 6 0V5"/></g><text x="78" y="100.5" class="cr-chip">Ponta a ponta</text><rect x="106" y="176" width="40" height="18" rx="6" fill="#222221"/><text x="126" y="188.5" text-anchor="middle" class="cr-dia">Hoje</text><rect x="54" y="206" width="92" height="32" rx="13" fill="#20201f"/><text x="66" y="226.5" class="cr-t">Que horas?</text><rect x="54" y="330" width="144" height="28" rx="14" fill="#20201f"/><text x="68" y="348" class="cr-comp">Mensagem</text><rect x="504" y="40" width="180" height="340" rx="32" fill="#0c0c0d" stroke="#2a3b57" stroke-width="1.5"/><rect x="512" y="48" width="164" height="324" rx="25" fill="#151515"/><rect x="572" y="56" width="44" height="13" rx="6.5" fill="#000"/><rect x="522" y="84" width="104" height="24" rx="8" fill="#0f2a4d"/><g transform="translate(530 90)" fill="none" stroke="#a9cbf3" stroke-width="1.4" stroke-linecap="round"><rect x="1" y="5" width="9" height="7" rx="1.6" fill="#a9cbf3" stroke="none"/><path d="M2.5 5V3.2a3 3 0 0 1 6 0V5"/></g><text x="546" y="100.5" class="cr-chip">Ponta a ponta</text><rect x="574" y="176" width="40" height="18" rx="6" fill="#222221"/><text x="594" y="188.5" text-anchor="middle" class="cr-dia">Hoje</text><rect x="574" y="206" width="92" height="32" rx="13" fill="#2a78d6"/><text x="586" y="226.5" class="cr-t cr-t--b">Que horas?</text><rect x="522" y="330" width="144" height="28" rx="14" fill="#20201f"/><text x="536" y="348" class="cr-comp">Mensagem</text><g class="cr-env"><rect x="62" y="250" width="136" height="54" rx="14" fill="#2a78d6"/><text x="74" y="272" class="cr-t cr-t--b">Sábado, 19h.</text><text x="74" y="291" class="cr-t cr-t--b">Ela não desconfia.</text></g><g class="cr-rec"><rect class="cr-rec-f" x="522" y="250" width="136" height="54" rx="14" fill="#13294a" stroke="#6da7ec" stroke-width="1"/><rect class="cr-rec-p" x="522" y="250" width="136" height="54" rx="14" fill="#20201f"/><g class="cr-c1"><text x="534" y="272" class="cr-cif">7Zr/kP0w9xQ2</text><text x="534" y="291" class="cr-cif">bL4+Vt0#mK2p</text></g><g class="cr-c2"><text x="534" y="272" class="cr-cif">aX9fz3Hs=Qe1</text><text x="534" y="291" class="cr-cif">W2n+8RkdT0/c</text></g><g class="cr-c3"><text x="534" y="272" class="cr-t">Sábado, 19h.</text><text x="534" y="291" class="cr-t">Ela não desconfia.</text></g></g><rect x="318" y="228" width="84" height="30" rx="8" fill="#102544" stroke="#26406a" stroke-width="1.2"/><circle cx="332" cy="243" r="3.5" fill="#2f4a73"/><rect x="344" y="241" width="44" height="4" rx="2" fill="#26406a"/><rect x="318" y="262" width="84" height="30" rx="8" fill="#102544" stroke="#26406a" stroke-width="1.2"/><circle cx="332" cy="277" r="3.5" fill="#2f4a73"/><rect x="344" y="275" width="44" height="4" rx="2" fill="#26406a"/><rect x="318" y="296" width="84" height="30" rx="8" fill="#102544" stroke="#26406a" stroke-width="1.2"/><circle cx="332" cy="311" r="3.5" fill="#2f4a73"/><rect x="344" y="309" width="44" height="4" rx="2" fill="#26406a"/><circle class="cr-led" cx="332" cy="243" r="3.5" fill="#55bf50"/><rect x="252" y="343" width="216" height="36" rx="10" fill="#0d2140" stroke="#26406a" stroke-width="1.2"/><text x="360" y="366" text-anchor="middle" class="cr-esp">• • •</text><text x="360" y="366" text-anchor="middle" class="cr-cif cr-r1">7Zr/kP0w9xQ2bL4+</text><text x="360" y="366" text-anchor="middle" class="cr-cif cr-r2">Vt0#mK2paX9fz3Hs</text><text x="360" y="366" text-anchor="middle" class="cr-cif cr-r3">7Zr/kP0w9xQ2bL4+Vt0=</text><text x="126" y="414" text-anchor="middle" class="cr-nome">Você</text><g transform="translate(81.3 426)" fill="none" stroke="#6da7ec" stroke-width="1.5" stroke-linecap="round"><circle cx="3.5" cy="6" r="3"/><path d="M6.5 6H13M10.5 6v2.6M13 6v2.6"/></g><text x="100.3" y="437" class="cr-sub">tem a chave</text><text x="360" y="414" text-anchor="middle" class="cr-nome">Servidor</text><g transform="translate(302.5 426)" fill="none" stroke="#8fa3c2" stroke-width="1.5" stroke-linecap="round"><circle cx="3.5" cy="6" r="3"/><path d="M6.5 6H13M10.5 6v2.6M13 6v2.6"/><path d="M0 12L13.5 0"/></g><text x="321.5" y="437" class="cr-sub">não tem a chave</text><text x="594" y="414" text-anchor="middle" class="cr-nome">Jhullye</text><g transform="translate(549.3 426)" fill="none" stroke="#6da7ec" stroke-width="1.5" stroke-linecap="round"><circle cx="3.5" cy="6" r="3"/><path d="M6.5 6H13M10.5 6v2.6M13 6v2.6"/></g><text x="568.3" y="437" class="cr-sub">tem a chave</text></svg></div><div class="m5-cripto-t"><h2 id="m5-cripto-t">Só vocês dois conseguem ler.</h2><p>A mensagem sai cifrada do seu celular e só abre no celular de quem recebe. No caminho, o nosso servidor só vê código: a chave fica nos dois aparelhos.</p><p>O app não pede a sua agenda nem a sua localização, e fotos e vídeos ficam fora da galeria.</p></div></section>
+
+<section class="m5-pro" aria-labelledby="m5-pro-t"><div class="m5-pro-t"><h2 id="m5-pro-t">E se alguém insistir?</h2><p>A senha de mentira mostra o Arquivo vazio. A verdadeira abre as conversas que você escondeu, um recurso do Plano anual.</p><div class="m5-senhas"><svg class="cena cena-senhas" viewBox="0 0 560 290" role="img" aria-label="Com a senha de mentira, o Arquivo abre vazio: nenhuma conversa arquivada. Com a senha verdadeira, o mesmo Arquivo mostra as conversas escondidas com a Jhullye e a Alexa."><rect x="0" y="0" width="270" height="290" rx="20" fill="#151515"/><text x="24" y="36" class="sn-rot">Senha de mentira</text><circle cx="30" cy="62" r="5.5" fill="none" stroke="#5f5e5a" stroke-width="1.5"/><circle class="sn-p sn-p11" cx="30" cy="62" r="5.5" fill="#f0efec"/><circle cx="50" cy="62" r="5.5" fill="none" stroke="#5f5e5a" stroke-width="1.5"/><circle class="sn-p sn-p12" cx="50" cy="62" r="5.5" fill="#f0efec"/><circle cx="70" cy="62" r="5.5" fill="none" stroke="#5f5e5a" stroke-width="1.5"/><circle class="sn-p sn-p13" cx="70" cy="62" r="5.5" fill="#f0efec"/><circle cx="90" cy="62" r="5.5" fill="none" stroke="#5f5e5a" stroke-width="1.5"/><circle class="sn-p sn-p14" cx="90" cy="62" r="5.5" fill="#f0efec"/><circle cx="110" cy="62" r="5.5" fill="none" stroke="#5f5e5a" stroke-width="1.5"/><circle class="sn-p sn-p15" cx="110" cy="62" r="5.5" fill="#f0efec"/><circle cx="130" cy="62" r="5.5" fill="none" stroke="#5f5e5a" stroke-width="1.5"/><circle class="sn-p sn-p16" cx="130" cy="62" r="5.5" fill="#f0efec"/><g class="sn-a sn-a1"><text x="24" y="116" class="sn-tit">Arquivo</text><path d="M24 134H246" stroke="#2a2a29" stroke-width="1"/><g transform="translate(121 162)" fill="none" stroke="#5f5e5a" stroke-width="1.8" stroke-linejoin="round"><path d="M2 4h24v6H2zM4.5 10v14h19V10M11 15h6"/></g><text x="135" y="218" text-anchor="middle" class="sn-vazio">Nenhuma conversa arquivada</text><text x="135" y="238" text-anchor="middle" class="sn-nota">As conversas escondidas não aparecem.</text></g><rect x="290" y="0" width="270" height="290" rx="20" fill="#151515"/><text x="314" y="36" class="sn-rot">Senha verdadeira</text><circle cx="320" cy="62" r="5.5" fill="none" stroke="#5f5e5a" stroke-width="1.5"/><circle class="sn-p sn-p21" cx="320" cy="62" r="5.5" fill="#f0efec"/><circle cx="340" cy="62" r="5.5" fill="none" stroke="#5f5e5a" stroke-width="1.5"/><circle class="sn-p sn-p22" cx="340" cy="62" r="5.5" fill="#f0efec"/><circle cx="360" cy="62" r="5.5" fill="none" stroke="#5f5e5a" stroke-width="1.5"/><circle class="sn-p sn-p23" cx="360" cy="62" r="5.5" fill="#f0efec"/><circle cx="380" cy="62" r="5.5" fill="none" stroke="#5f5e5a" stroke-width="1.5"/><circle class="sn-p sn-p24" cx="380" cy="62" r="5.5" fill="#f0efec"/><circle cx="400" cy="62" r="5.5" fill="none" stroke="#5f5e5a" stroke-width="1.5"/><circle class="sn-p sn-p25" cx="400" cy="62" r="5.5" fill="#f0efec"/><circle cx="420" cy="62" r="5.5" fill="none" stroke="#5f5e5a" stroke-width="1.5"/><circle class="sn-p sn-p26" cx="420" cy="62" r="5.5" fill="#f0efec"/><g class="sn-a sn-a2"><text x="314" y="116" class="sn-tit">Arquivo</text><path d="M314 134H536" stroke="#2a2a29" stroke-width="1"/><circle cx="334" cy="168" r="19" fill="#20201f"/><text x="334" y="173.5" text-anchor="middle" class="sn-ini">J</text><text x="364" y="165" class="sn-nome">Jhullye</text><text x="364" y="183" class="sn-prev">Fechado. Sábado, 19h.</text><text x="536" y="165" text-anchor="end" class="sn-prev">19:42</text><circle cx="334" cy="226" r="19" fill="#20201f"/><text x="334" y="231.5" text-anchor="middle" class="sn-ini">A</text><text x="364" y="223" class="sn-nome">Alexa</text><text x="364" y="241" class="sn-prev">Foto</text><text x="536" y="223" text-anchor="end" class="sn-prev">17:03</text></g></svg></div></div>
+<div class="m5-pro-l"><ul><li><b>Avisos</b>Só “Novo cálculo disponível”, ou nenhum. Nunca o nome nem a mensagem.</li><li><b>Dois toques no topo</b>Voltam para a calculadora.</li><li><b>Sair do app</b>Trava na hora.</li><li><b>Prints</b>Bloqueados no Android. No iPhone, o sistema não deixa bloquear.</li><li><b>Backup</b>Fica fora do Google e do iCloud.</li></ul>
+<p class="m5-lim"><a href="privacidade.html#limites">O que o app não protege</a></p></div></section>
+
+<section class="m5-fim" id="baixar-5" aria-labelledby="m5-fim-t"><span class="m5-logo"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path fill="currentColor" d="M27 26h46a9 9 0 0 1 0 18H27a9 9 0 0 1 0-18Zm0 23h46a9 9 0 0 1 0 18H42.5L31 77c-1.900 1.700-3.500.800-3.500-1.500V67H27a9 9 0 0 1 0-18Z"/></svg></span><h2 id="m5-fim-t">Baixe o Contatinho.</h2><div class="m5-lojas"><a href="https://apps.apple.com/br/app/id6829813231">Baixar na App Store</a><a href="https://play.google.com/store/apps/details?id=com.vexmenu.calculadora">Baixar no Google Play</a></div><p>Só para maiores de 18 anos. Bloqueie e denuncie qualquer pessoa: a moderação pode advertir, suspender ou encerrar contas.</p></section>
+</main>
+</div>
+
+<footer class="rod">
+<div class="rod-in">
+<div class="rod-marca"><a href="#topo" aria-label="Contatinho, início"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path fill="currentColor" d="M27 26h46a9 9 0 0 1 0 18H27a9 9 0 0 1 0-18Zm0 23h46a9 9 0 0 1 0 18H42.5L31 77c-1.900 1.700-3.500.800-3.500-1.500V67H27a9 9 0 0 1 0-18Z"/></svg><span>Contatinho</span></a><p>Conversas protegidas atrás de uma calculadora. Só para maiores de 18 anos.</p></div>
+<nav class="rod-links" aria-label="Rodapé">
+<div><h2>Documentos</h2><ul><li><a href="privacidade.html">Privacidade</a></li><li><a href="termos.html">Termos de uso</a></li><li><a href="seguranca-infantil.html">Segurança infantil</a></li></ul></div>
+<div><h2>Ajuda</h2><ul><li><a href="suporte.html">Suporte</a></li><li><a href="excluir-conta.html">Excluir conta</a></li><li><a href="mailto:dev@vexcode.com.br">Fale com a gente</a></li></ul></div>
+</nav>
+<div class="rod-leg"><p><span>VEXMENU LTDA</span> <span>CNPJ 63.913.759/0001-85</span> <a href="mailto:dev@vexcode.com.br">dev@vexcode.com.br</a></p><p>Este site não usa cookies nem rastreadores.</p></div>
 </div>
 </footer>
 </body>
