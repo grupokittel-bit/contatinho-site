@@ -408,7 +408,7 @@ a:focus-visible,[tabindex]:focus-visible{outline:2px solid currentColor;outline-
 .velas{font-family:"Fraunces",Georgia,serif!important;font-size:30px;fill:#f09978}
 
 @media (prefers-reduced-motion:no-preference){
-/* ponta a ponta: 10 s. Sua mensagem aparece, o pacote passa pelo servidor (que só vê código) e vira texto na Jhullye */
+/* ponta a ponta: 10 s. Sua mensagem aparece, o pacote passa pelo servidor (que só vê código) e vira texto no celular da Bia */
 .cr-pac,.cr-env,.cr-rec,.cr-rec-f,.cr-rec-p,.cr-c1,.cr-c2,.cr-c3,.cr-led,.cr-esp,.cr-r1,.cr-r2,.cr-r3{animation:10s linear infinite}
 .cr-pac{animation-name:cr-pac}
 @keyframes cr-pac{0%,16%{transform:translate(150px,277px);animation-timing-function:cubic-bezier(.45,0,.35,1)}34%{transform:translate(360px,277px)}44%{transform:translate(360px,277px);animation-timing-function:cubic-bezier(.45,0,.35,1)}62%,100%{transform:translate(570px,277px)}}

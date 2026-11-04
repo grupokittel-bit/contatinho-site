@@ -43,9 +43,9 @@
     const visu = $(c, '[data-visu]'); if (visu) visu.classList.remove('on', 'foto', 'video');
     for (let n = 2; n <= 6; n++) mensagem(c, n, false);
     mensagem(c, 1, true);
-    liga(c, '[data-jhu]', 'fora', false);
-    const jp = $(c, '[data-jhu-prev]'); if (jp) jp.textContent = 'A surpresa ainda tá de pé?';
-    const jh = $(c, '[data-jhu-hora]'); if (jh) jh.textContent = '19:40';
+    liga(c, '[data-bia]', 'fora', false);
+    const jp = $(c, '[data-bia-prev]'); if (jp) jp.textContent = 'A surpresa ainda tá de pé?';
+    const jh = $(c, '[data-bia-hora]'); if (jh) jh.textContent = '19:40';
         const nl = $(c, '[data-naolidas]'); if (nl) nl.hidden = false;
     c.raiz.querySelectorAll('[data-pontos] i').forEach(i => i.classList.remove('c'));
     const expr = $(c, '[data-expr]'); if (expr) expr.textContent = '\u00a0';
@@ -142,7 +142,7 @@
     await tocar(c, tecla(c, '='), 200);
     mostrar(c, 'lista'); soltar(c); cena(c, 'lista');
     await espera(c, 1200);
-    await tocar(c, $(c, '[data-jhu]'), 320);
+    await tocar(c, $(c, '[data-bia]'), 320);
     $(c, '[data-naolidas]').hidden = true;
     mostrar(c, 'conv'); soltar(c); cena(c, 'conversa');
     await espera(c, 800);
@@ -198,13 +198,13 @@
     // Esconder a conversa (como no app): volta para a lista, segura a conversa, Esconder, confirma.
     cena(c, 'voltar');
     await tocar(c, $(c, '[data-volta]'), 300);
-    $(c, '[data-jhu-prev]').textContent = 'Fechado. Sábado, 19h.';
-    $(c, '[data-jhu-hora]').textContent = '19:42';
+    $(c, '[data-bia-prev]').textContent = 'Fechado. Sábado, 19h.';
+    $(c, '[data-bia-hora]').textContent = '19:42';
     mostrar(c, 'lista');
     soltar(c);
     await espera(c, 800);
     cena(c, 'esconder');
-    await tocar(c, $(c, '[data-jhu]'), 320, 650);
+    await tocar(c, $(c, '[data-bia]'), 320, 650);
     liga(c, '[data-acoes]', 'on', true);
     soltar(c);
     await espera(c, 1100);
@@ -217,7 +217,7 @@
     liga(c, '[data-folha]', 'on', false);
     soltar(c);
     await espera(c, 320);
-    liga(c, '[data-jhu]', 'fora', true);
+    liga(c, '[data-bia]', 'fora', true);
     liga(c, '[data-aviso]', 'on', true);
     await espera(c, 1500);
     liga(c, '[data-aviso]', 'on', false);
